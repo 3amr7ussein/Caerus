@@ -1,0 +1,97 @@
+.discoverWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+@media (max-width: 600px) {
+  .media {
+    padding: 0px 30px;
+  }
+}
+@media (min-width: 900px) {
+  .exploreWrapper {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .exploreWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.exploreImage {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  flex-direction: column;
+  background-attachment: fixed;
+}
+.card {
+  border-radius: 10px;
+  margin-top: 227px;
+}
+@media (max-width: 600px) {
+  .card {
+    margin-top: 50px;
+  }
+}
+.exploreHeader {
+  font-family: "open sans condensed";
+  margin-bottom: 0px;
+}
+@media (max-width: 600px) {
+  .exploreHeader {
+    font-size: 36px;
+  }
+}
+.inputGroup {
+  :global {
+    .ant-input {
+      height: 48px;
+    }
+  }
+}
+.filterSearch {
+  margin-top: 24px;
+  height: 48px;
+  border-color: $brandOrange;
+  :global {
+    .ant-input {
+      border-color: $brandOrange;
+    }
+    .ant-input:not(:first-child) {
+      padding-left: 35px;
+    }
+    .ant-input-prefix {
+      bottom: 0px;
+    }
+    .ant-input-suffix {
+      bottom: 5px;
+    }
+  }
+}
+.search {
+  margin-top: 32px;
+}
+.button {
+  float: right;
+  margin-top: 24px;
+  line-height: 48px;
+}
+.header {
+  color: white;
+  // width: 90%;
+  font-size: 46px;
+}
+@media (max-width: 600px) {
+  .header {
+    font-size: 36px;
+  }
+}

@@ -1,0 +1,48 @@
+.discoverWrapper {
+  display: flex;
+  // flex-direction: row;
+  flex: 1;
+  margin: 0px auto;
+  max-width: $containerWidth;
+  position: absolute;
+  height: 500px;
+}
+
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+.discoverBody {
+  background-repeat: no-repeat;
+  display: flex;
+  margin-top: 74px;
+  margin-left: 80px;
+  margin-bottom: 100px;
+  padding-top: 75px;
+  position: relative;
+  left: 0;
+  top: 0;
+  // background-color: red;
+  // width: 50%;
+}
+.dicoverList {
+  // background-color: aqua;
+  position: absolute;
+  right: 120px;
+  top: 370px;
+  width: 50%;
+}
+@media (max-width: 1024px) {
+  .discoverBody {
+    background-image: none !important;
+  }
+}
+
+.subHeader {
+  font-size: 30;
+  font-family: "Helvetica";
+  color: white;
+  margin-bottom: 0;
+  text-align: center;
+}

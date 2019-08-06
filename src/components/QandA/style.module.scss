@@ -1,0 +1,7 @@
+.accordion {
+  :global {
+    .ant-collapse-item {
+      border-bottom: none;
+    }
+  }
+}

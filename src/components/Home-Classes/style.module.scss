@@ -1,0 +1,32 @@
+.discoverWrapper {
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+@media (max-width: 600px) {
+  .media {
+    padding: 0px 30px;
+  }
+}
+.boxStyle {
+  background: rgba(255, 255, 255, 0.51);
+  box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.15);
+}
+.subHeader {
+  font-size: 30;
+  font-family: "Helvetica";
+  color: $brandGrey;
+  margin-bottom: 0;
+  text-align: center;
+}
+.note {
+  border-left: 4px solid $brandOrange;
+  border-radius: 3.5px;
+}
+.cards {
+  margin-top: 32px;
+}

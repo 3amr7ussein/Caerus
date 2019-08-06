@@ -1,0 +1,105 @@
+.subHeader {
+  font-size: 30;
+  font-family: "Helvetica";
+  color: $brandGrey;
+  margin-bottom: 0;
+  text-align: center;
+}
+.dadSection {
+  position: relative;
+  height: 800px;
+}
+.imgStyle {
+  position: absolute;
+  top: 0px;
+  right: 100px;
+  z-index: 1;
+}
+.imgCircleStyle {
+  position: absolute;
+  top: -600px;
+  right: 0;
+  // z-index: 0;
+}
+.discoverWrapper {
+  display: flex;
+  // flex: 1;
+  // margin: 0px auto;
+  // max-width: $containerWidth;
+  // justify-content: center;
+  align-items: center;
+  // background-color: aqua;
+  // background-repeat: no-repeat;
+  // background-position: right center;
+  padding: 20px;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  height: 700px;
+  background-color: #fff;
+  // bottom: 190px;
+  // z-index: 100;
+  // // background-color:rgba(255,255,255,0.5);
+  // background: rgb(255, 255, 255) transparent;
+}
+
+.discoverBody {
+  // background-repeat: no-repeat;
+  // display: flex;
+  max-width: 530px;
+  // justify-content: center;
+  align-items: center;
+  // margin-top: 50px;
+}
+.downloadLinks {
+  margin-top: 121px;
+  text-align: center;
+  float: right;
+
+  a {
+    text-align: center;
+    display: block;
+  }
+}
+
+@media (max-width: 1424px) and (min-width: 400px) {
+  .discoverBody {
+    max-width: 80%;
+  }
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+  .imgStyle {
+    display: none;
+  }
+  .imgCircleStyle {
+    display: none;
+  }
+  .downloadLinks {
+    margin-top: 41px;
+  }
+}
+.description {
+  font-size: 18;
+  color: $brandGrey;
+}
+.brand_leaf {
+  height: 108px;
+  width: 86px;
+}
+
+.BrandSubHeader {
+  color: $brandGreen;
+}
+
+.discoverDesc {
+  text-align: start;
+}
+
+.listHeader {
+  :global {
+    .ant-list-split .ant-list-header {
+      border-bottom: none;
+    }
+  }
+}

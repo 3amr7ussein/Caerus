@@ -1,0 +1,18 @@
+.ListContainer {
+  strong {
+    font-weight: 6000;
+    font-size: 19px;
+    color: white;
+  }
+
+  div {
+    padding: 12px 0px;
+
+    a {
+      display: block;
+      font-size: 16px;
+      color: $brandGrey;
+      line-height: 29px;
+    }
+  }
+}

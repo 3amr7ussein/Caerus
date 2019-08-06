@@ -1,0 +1,23 @@
+.discoverWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 15px;
+  }
+}
+.dividerText {
+  :global {
+    .ant-divider-inner-text {
+      font-weight: bold;
+      font-size: 36px;
+    }
+  }
+}
+p {
+  font-size: 18px;
+  font-family: "Helvetica Neue LT Std";
+}

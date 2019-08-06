@@ -1,0 +1,28 @@
+.exploreImage {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  //   clip-path: polygon(100% 0px, 0px 0px, 0px 88%, 50% 100%, 100% 88%);
+}
+.dividerText {
+  :global {
+    .ant-divider-inner-text {
+      font-weight: bold;
+      font-size: 36px;
+    }
+  }
+}
+.discoverWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}

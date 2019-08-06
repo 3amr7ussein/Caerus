@@ -1,0 +1,27 @@
+.button {
+  background-color: $brandOrange;
+  // font-family: open sans condensed;
+  font-size: 22px;
+  font-weight: bold;
+  height: 48px;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: none;
+  color: white;
+  border-color: transparent;
+  :global {
+    a.ant-btn {
+      line-height: 48px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .button {
+    width: 170px;
+  }
+}
+.ant-btn:hover {
+  background-color: $brandOrange;
+  color: white;
+  border-color: $brandOrange;
+}

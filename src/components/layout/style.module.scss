@@ -1,0 +1,240 @@
+.nav {
+  :global {
+    .ant-menu-horizontal > .ant-menu-item:hover a {
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  .menuBar {
+    padding: 6px 20px;
+    background-color: #ff4200;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+}
+
+.scrolled {
+  .menuBar {
+    padding: 6px 20px;
+    transition: all 0.5s;
+  }
+}
+.layout {
+  menu {
+    margin: 0px auto;
+    max-width: $containerWidth;
+    justify-content: center;
+  }
+}
+.layout {
+  main.container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-self: center;
+    margin: auto;
+  }
+}
+
+.siteFooter {
+  background: #0c141f;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 8px;
+}
+
+.footerContainer {
+  display: flex;
+  flex: 1;
+  max-width: $containerWidth;
+  margin: 0 auto;
+  padding: 16px 0px;
+}
+
+@media (max-width: $containerWidth) {
+  .footerContainer {
+    padding: 0px 15px;
+  }
+}
+
+.row {
+  width: 100%;
+}
+
+.footerLabel {
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+}
+
+.socialWrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+.socialLink {
+  display: flex;
+  color: white;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-left: 6px;
+}
+
+.downloadLink {
+  color: white;
+  width: 38px;
+  height: 38px;
+  padding: 8px;
+}
+.copyrights {
+  text-align: center;
+  display: block;
+  margin-bottom: 16;
+  color: $brandGrey;
+}
+
+.discoverWrapper {
+  display: flex;
+  flex: 1;
+  margin: 0px auto;
+  max-width: $containerWidth;
+  justify-content: center;
+}
+
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+
+// .menuBar {
+//   padding: 6px 20px;
+//   background-color: $brandOrange;
+//   overflow: auto;
+// }
+.logo {
+  width: 75px;
+  float: left;
+}
+
+.menuCon {
+  width: calc(100% - 150px);
+  float: left;
+}
+.menuCon .ant-menu-item {
+  padding: 0px 5px;
+}
+.menuCon .ant-menu-submenu-title {
+  padding: 10px 20px;
+}
+
+.menuCon .ant-menu-horizontal {
+  border-bottom: none;
+}
+
+.leftMenu {
+  :golbal {
+    .ant-menu {
+      background-color: $brandOrange;
+    }
+  }
+}
+.rightMenu {
+  :golbal {
+    .ant-menu {
+      background-color: $brandOrange;
+    }
+  }
+}
+.menuCon .leftMenu {
+  float: left;
+}
+.menuCon .rightMenu {
+  float: right;
+}
+.barsMenu {
+  float: right;
+  height: 32px;
+  padding: 6px;
+  margin-top: 8px;
+  display: none;
+  background: none;
+}
+.barsBtn {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: white;
+  position: relative;
+}
+.barsBtn:after,
+.barsBtn:before {
+  content: attr(x);
+  width: 20px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 2px;
+  background: white;
+}
+.barsBtn:after {
+  top: auto;
+  bottom: -6px;
+}
+.ant-drawer-body {
+  padding: 0;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item,
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu {
+  display: inline-block;
+  width: 100%;
+}
+.ant-drawer-body .ant-menu-horizontal {
+  border-bottom: none;
+}
+
+@media (max-width: 767px) {
+  .barsMenu {
+    display: inline-block;
+  }
+  .rightMenu,
+  .leftMenu {
+    display: none;
+  }
+  .logo a {
+    margin-left: -20px;
+  }
+  .menuCon .ant-menu-item,
+  .menuCon .ant-menu-submenu-title {
+    padding: 1px 20px;
+  }
+  .logo a {
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .barsMenu {
+    display: inline-block;
+  }
+
+  .rightMenu {
+    display: none;
+  }
+  .logo a {
+    margin-left: -20px;
+  }
+  .menuCon .ant-menu-item,
+  .menuCon .ant-menu-submenu-title {
+    padding: 1px 20px;
+  }
+  .logo a {
+    padding: 10px 20px;
+  }
+}

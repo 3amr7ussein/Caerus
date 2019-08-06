@@ -1,0 +1,36 @@
+.buttonDown {
+  background-color: $brandOrange;
+  // padding: 15px 10px 10px 15px;
+  border-width: 1;
+  border-radius: 10;
+  margin-right: 10;
+  margin-left: 10;
+}
+
+.num {
+  align-self: center;
+  font-weight: bold;
+}
+.numView {
+  background-color: white;
+  padding: 5px;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: transparent;
+}
+.modal {
+  :global {
+    .ant-modal-title {
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 30px;
+    }
+    .ant-modal-header {
+      border-bottom: none;
+    }
+    .ant-modal-footer {
+      display: none;
+    }
+  }
+}

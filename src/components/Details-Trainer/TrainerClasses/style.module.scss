@@ -1,0 +1,50 @@
+.discoverWrapper {
+  display: block;
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 15px;
+  }
+}
+.dividerText {
+  :global {
+    .ant-divider-inner-text {
+      font-weight: bold;
+      font-size: 36px;
+    }
+  }
+}
+.location {
+  color: $brandGrey;
+  font-size: 16px;
+}
+
+.studioLink {
+  font-size: 24px;
+  color: black;
+
+  a:hover {
+    color: $brandOrange;
+  }
+}
+.locationText {
+  margin-left: 16px;
+}
+.cards {
+  margin-top: 32px;
+}
+.cardMeta {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  :global {
+    .ant-card-body {
+      padding: 16px;
+    }
+  }
+}
+.rate {
+  font-size: 12px;
+  margin-bottom: 11px;
+}

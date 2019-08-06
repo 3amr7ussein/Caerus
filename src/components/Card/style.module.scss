@@ -1,0 +1,27 @@
+.cardMeta {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  :global {
+    .ant-card-body {
+      padding: 16px;
+    }
+  }
+}
+.cardTitle {
+  font-size: 24px;
+  color: black;
+
+  a:hover {
+    color: $brandOrange;
+  }
+}
+.cardRate {
+  font-size: 12px;
+  margin-bottom: 11px;
+}
+.cardLocation {
+  color: $brandGrey;
+  font-size: 16px;
+}
+.cardLocationText {
+  margin-left: 16px;
+}

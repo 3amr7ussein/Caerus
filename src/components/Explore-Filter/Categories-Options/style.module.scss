@@ -1,0 +1,42 @@
+.discoverWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+
+.dividerText {
+  :global {
+    .ant-divider-inner-text {
+      color: $brandGrey;
+    }
+  }
+}
+.catItem {
+  border: 1px solid $brandGrey;
+  border-radius: 3px;
+  margin-left: 12px;
+  padding: 10px;
+}
+
+.catText {
+  height: 48px;
+  color: black;
+}
+.textSelected {
+  height: 48px;
+  color: white;
+  padding: 16px;
+}
+.catSelected {
+  border: 1px solid $brandOrange;
+  border-radius: 3px;
+  margin-left: 12px;
+  background-color: $brandOrange;
+  padding: 16px;
+}

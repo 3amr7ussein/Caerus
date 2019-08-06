@@ -1,0 +1,50 @@
+.fbButton {
+  background-color: #2d70be;
+  border-radius: 8px;
+  color: white;
+}
+.inputN {
+  margin-bottom: 15px;
+  display: flex;
+  width: 100%;
+}
+.inputPW {
+  margin-bottom: 15px;
+}
+.logButton {
+  margin-top: 24px;
+  margin-bottom: 15px;
+}
+.register {
+  color: $brandGrey;
+  text-align: center;
+  a {
+    color: $brandOrange;
+  }
+  a:hover {
+    text-decoration: $brandOrange;
+  }
+}
+.modal {
+  p {
+    margin-bottom: 0px;
+  }
+  :global {
+    .ant-modal-content {
+      margin-top: 95px;
+      padding: 0px 50px;
+    }
+    .ant-modal-title {
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 30px;
+    }
+    .ant-modal-header {
+      border-bottom: none;
+    }
+    .ant-modal-footer {
+      display: none;
+    }
+  }
+}

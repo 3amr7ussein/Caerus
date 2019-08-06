@@ -1,0 +1,13 @@
+.discoverWrapper {
+  display: flex;
+  flex: 1;
+  margin: 0px auto;
+  max-width: $containerWidth;
+  justify-content: center;
+}
+
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}

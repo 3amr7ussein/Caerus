@@ -1,0 +1,40 @@
+.discoverWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+.gridView {
+  margin-top: 8px;
+}
+.locations {
+  p {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-family: "open sans condensed";
+  }
+  span {
+    font-size: 18px;
+  }
+}
+.phones {
+  margin-top: 24px;
+  p {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-family: "open sans condensed";
+  }
+}
+.follow {
+  margin-top: 24px;
+  p {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-family: "open sans condensed";
+  }
+}

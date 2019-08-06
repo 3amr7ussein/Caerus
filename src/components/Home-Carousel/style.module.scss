@@ -1,0 +1,104 @@
+.containerStyle {
+  background-color: #f8f8f8;
+  position: relative;
+  padding: 10px;
+}
+
+.editedClass {
+  :global {
+    .ant-carousel .slick-slider .slick-dots {
+      display: none !important;
+    }
+    .ant-row {
+      display: flex;
+      justify-content: center;
+    }
+    .ant-col {
+      display: flex;
+      align-items: center;
+    }
+    .slick-slider .slick-list .slick-track {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.rightArrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  cursor: pointer;
+}
+.leftArrow {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  cursor: pointer;
+  z-index: 3;
+}
+// .caroline{
+//   background-color: black;
+//   border: 1px solid red;
+//   width: 40% !important;
+//   // height: 100%;
+//   color: white
+// }
+// .caroline h3{
+//   color: white
+// }
+
+.discoverWrapper {
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .carousel {
+    height: 660;
+  }
+}
+.johnDoe {
+  margin: 0px auto;
+}
+.whiteSquare {
+  background-color: white;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: -56px;
+
+  span {
+    font-size: 14px;
+    color: $brandGrey;
+  }
+}
+.littleDiv {
+  background-color: $brandOrange;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.headingStyle {
+  color: $brandGrey !important;
+}
+.spanStyle {
+  color: $brandGrey !important;
+}
+.name {
+  color: $brandOrange;
+  padding-top: 70px;
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+.comment {
+  font-size: 15px;
+  padding: 24px;
+  text-align: justify;
+}
+.ant-carousel .slick-dots li button {
+  width: 10px;
+  height: 10px;
+}

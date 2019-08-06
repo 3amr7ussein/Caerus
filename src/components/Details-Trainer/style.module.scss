@@ -1,0 +1,25 @@
+.orangeBlock {
+  background-color: $brandOrange;
+  width: 100%;
+  height: 70px;
+  border-radius: 3px;
+}
+.dividerText {
+  :global {
+    .ant-divider-inner-text {
+      font-weight: bold;
+      font-size: 36px;
+    }
+  }
+}
+.discoverWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}

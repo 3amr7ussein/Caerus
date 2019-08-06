@@ -1,0 +1,29 @@
+.discoverWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+.gridView {
+  display: flex;
+  margin-top: 48px;
+}
+.data {
+  margin-bottom: 10px;
+  p {
+    margin-bottom: 0px;
+    margin-left: 32px;
+    font-size: 32px;
+    font-family: "open sans condensed";
+    color: black;
+  }
+}
+.rate {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
