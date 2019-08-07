@@ -9,11 +9,11 @@ exports.createPages = ({ graphql, actions }) => {
   //   matchPath: "/classes/:id",
   //   component: path.resolve(`./src/pages/trainers/index.js`),
   // })
-  // createPage({
-  //   path: "/trainer/*",
-  //   matchPath: "/trainer/:id",
-  //   component: path.resolve(`src/pages/trainers/index.js`),
-  // })
+  createPage({
+    path: "/trainer/*",
+    matchPath: "/trainer/:id",
+    component: path.resolve(`src/pages/trainers/index.js`),
+  })
   // createPage({
   //   path: "/studio/*",
   //   matchPath: "/studio/:id",
