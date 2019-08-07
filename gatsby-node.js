@@ -7,7 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
   createPage({
     path: "/classes/*",
     matchPath: "/classes/:id",
-    component: path.resolve(`src/pages/classes/index.js`),
+    component: path.resolve(`src/pages/Classes/index.js`),
   })
   createPage({
     path: "/trainer/*",
