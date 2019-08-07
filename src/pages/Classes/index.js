@@ -13,8 +13,7 @@ import QuerySingleWorkClass from "../../Graphql/QuerySingleWorkClass"
 class BlogIndex extends React.Component {
   render() {
     // console.log("ClassDataFromExplore", this.props.location.state)
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
+
     let classId = this.props.location.pathname.replace("/classes/", "")
     // return null
     return (
@@ -30,7 +29,7 @@ class BlogIndex extends React.Component {
           if (error || loading) return null
 
           return (
-            <Layout location={this.props.location} title={siteTitle}>
+            <Layout location={this.props.location}>
               <SEO
                 title="TrainerDetails Page"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -47,13 +46,3 @@ class BlogIndex extends React.Component {
 }
 
 export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

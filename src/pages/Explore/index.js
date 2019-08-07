@@ -26,10 +26,10 @@ class BlogIndex extends React.Component {
 
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
+    // const siteTitle = data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
           title="Explore Page"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -57,13 +57,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(BlogIndex)
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

@@ -45,7 +45,7 @@ class BlogIndex extends React.Component {
           }}
         >
           {({ loading, error, data, fetchMore, ...results }) => {
-            if (error) return null
+            if (error) return <div />
             if (loading) {
               if (data && data.trainer) {
                 return (
@@ -96,6 +96,8 @@ class BlogIndex extends React.Component {
                   </div>
                 </>
               )
+
+            return <div />
           }}
         </Query>
         <section />
