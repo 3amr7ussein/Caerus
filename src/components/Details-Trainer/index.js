@@ -11,7 +11,7 @@ const { Content } = Layout
 
 export default class TrainerDetails extends Component {
   render() {
-    console.log(this.props.singleTrainerDetails)
+    // console.log(this.props.singleTrainerDetails)
     return (
       <StaticQuery
         query={TrainerDetailsQuery}

@@ -40,7 +40,7 @@ class RightMenu extends Component {
   }
 
   render() {
-    console.log("Home", this.props.user)
+    // console.log("Home", this.props.user)
     return (
       <div>
         <Menu mode="horizontal">

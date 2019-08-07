@@ -9,7 +9,7 @@ import img_dancer from "../../../static/Images/img_dancer.png"
 
 const { Content } = Layout
 
-console.log("MOBILE", isMobile)
+// console.log("MOBILE", isMobile)
 
 export default class GetStartedSection extends Component {
   state = {

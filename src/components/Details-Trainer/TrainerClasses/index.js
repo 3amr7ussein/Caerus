@@ -24,7 +24,7 @@ class TrainerClasses extends Component {
   }
 
   render() {
-    console.log("TrainerClasses", this.props.classes)
+    // console.log("TrainerClasses", this.props.classes)
     return (
       <StaticQuery
         query={TrainerClassesQuery}

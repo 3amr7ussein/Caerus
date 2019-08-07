@@ -10,7 +10,7 @@ const { Content } = Layout
 
 export default class HomeClasses extends Component {
   render() {
-    console.log("HomeClasses", this.props.homeClasses)
+    // console.log("HomeClasses", this.props.homeClasses)
 
     return (
       <section

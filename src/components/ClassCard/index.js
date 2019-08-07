@@ -8,7 +8,7 @@ const { Content } = Layout
 
 class ClassCard extends Component {
   render() {
-    console.log("myClasses2", this.props.myClasses)
+    // console.log("myClasses2", this.props.myClasses)
 
     return (
       <section

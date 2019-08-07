@@ -7,42 +7,42 @@ exports.createPages = ({ graphql, actions }) => {
   createPage({
     path: "/classes/*",
     matchPath: "/classes/:id",
-    component: path.resolve(`src/pages/Classes/index.js`),
+    component: path.resolve(`src/pages/trainers/index.js`),
   })
   createPage({
     path: "/trainer/*",
     matchPath: "/trainer/:id",
-    component: path.resolve(`src/pages/Trainers/index.js`),
+    component: path.resolve(`src/pages/trainers/index.js`),
   })
   createPage({
     path: "/studio/*",
     matchPath: "/studio/:id",
-    component: path.resolve(`src/pages/Studios/index.js`),
+    component: path.resolve(`src/pages/studios/index.js`),
   })
   createPage({
     path: "/invoice/*",
     matchPath: "/invoice/",
-    component: path.resolve(`src/pages/Booking/index.js`),
+    component: path.resolve(`src/pages/booking/index.js`),
   })
   createPage({
     path: "/myProfile/*",
     matchPath: "/myProfile/",
-    component: path.resolve(`src/pages/Profile/index.js`),
+    component: path.resolve(`src/pages/profile/index.js`),
   })
   createPage({
     path: "/myBooking/*",
     matchPath: "/myBooking/",
-    component: path.resolve(`src/pages/MyBooking/index.js`),
+    component: path.resolve(`src/pages/my_booking/index.js`),
   })
   createPage({
     path: "/myFav/*",
     matchPath: "/myFav/",
-    component: path.resolve(`src/pages/MyFav/index.js`),
+    component: path.resolve(`src/pages/my_fav/index.js`),
   })
   createPage({
     path: "/q&a/*",
     matchPath: "/q&a/",
-    component: path.resolve(`src/pages/Q&A/index.js`),
+    component: path.resolve(`src/pages/q_a/index.js`),
   })
 
   return null

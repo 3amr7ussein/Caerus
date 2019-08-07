@@ -58,7 +58,7 @@ class MyClasses extends React.Component {
   //   </div>
   // )
   render() {
-    console.log("MYCLASSES", this.props.myClasses)
+    // console.log("MYCLASSES", this.props.myClasses)
 
     return (
       <div
