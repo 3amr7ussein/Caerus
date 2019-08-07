@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-
+import { Spin } from "antd"
 import Layout from "../components/layout/index"
 import SEO from "../components/seo/index"
 
@@ -11,9 +11,20 @@ class NotFoundPage extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="404: Not Found" />
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        <SEO />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            height: 400,
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Spin size="large" />
+          <h2>This page under maintenance </h2>
+          <p>Back to home and book your class</p>
+        </div>
       </Layout>
     )
   }
