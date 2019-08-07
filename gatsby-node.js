@@ -12,17 +12,17 @@ exports.createPages = ({ graphql, actions }) => {
   createPage({
     path: "/trainer/*",
     matchPath: "/trainer/:id",
-    component: path.resolve(`src/pages/trainers/index.js`),
+    component: path.resolve(`src/pages/Trainers/index.js`),
   })
   createPage({
     path: "/studio/*",
     matchPath: "/studio/:id",
-    component: path.resolve(`src/pages/studios/index.js`),
+    component: path.resolve(`src/pages/Studios/index.js`),
   })
   createPage({
     path: "/invoice/*",
     matchPath: "/invoice/",
-    component: path.resolve(`src/pages/booking/index.js`),
+    component: path.resolve(`src/pages/Booking/index.js`),
   })
   createPage({
     path: "/myProfile/*",
@@ -42,7 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
   createPage({
     path: "/q&a/*",
     matchPath: "/q&a/",
-    component: path.resolve(`src/pages/q_a/index.js`),
+    component: path.resolve(`src/pages/QnA/index.js`),
   })
 
   return null
