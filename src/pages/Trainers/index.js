@@ -1,6 +1,6 @@
-import React from "./node_modules/react"
-import { graphql } from "./node_modules/gatsby"
-import { Query } from "./node_modules/react-apollo"
+import React from "react"
+import { graphql } from "gatsby"
+import { Query } from "react-apollo"
 
 import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
@@ -10,8 +10,8 @@ import ExploreFilter from "../../components/Explore-Filter/ExploreFilter"
 import TrainerDetails from "../../components/Details-Trainer"
 import QueryTrainer from "../../Graphql/QueryTrainer"
 import BrandedButton from "../../components/brandedButton/BrandedButton"
-import { Spin } from "./node_modules/antd"
-const moment = require("./node_modules/moment")
+import { Spin } from "antd"
+const moment = require("moment")
 
 class BlogIndex extends React.Component {
   state = {

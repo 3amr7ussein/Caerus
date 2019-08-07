@@ -1,6 +1,6 @@
-import React from "./node_modules/react"
-import { graphql } from "./node_modules/gatsby"
-import { Query } from "./node_modules/react-apollo"
+import React from "react"
+import { graphql } from "gatsby"
+import { Query } from "react-apollo"
 
 import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
