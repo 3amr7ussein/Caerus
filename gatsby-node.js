@@ -27,17 +27,17 @@ exports.createPages = ({ graphql, actions }) => {
   createPage({
     path: "/myProfile/*",
     matchPath: "/myProfile/",
-    component: path.resolve(`src/pages/profile/index.js`),
+    component: path.resolve(`src/pages/Profile/index.js`),
   })
   createPage({
     path: "/myBooking/*",
     matchPath: "/myBooking/",
-    component: path.resolve(`src/pages/my_booking/index.js`),
+    component: path.resolve(`src/pages/myBooking/index.js`),
   })
   createPage({
     path: "/myFav/*",
     matchPath: "/myFav/",
-    component: path.resolve(`src/pages/my_fav/index.js`),
+    component: path.resolve(`src/pages/myFav/index.js`),
   })
   createPage({
     path: "/q&a/*",
