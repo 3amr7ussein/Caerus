@@ -34,6 +34,7 @@ class BlogIndex extends React.Component {
           title="TrainerDetails Page"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
+
         <Query
           client={graphQLClient}
           query={QueryTrainer}
@@ -45,22 +46,26 @@ class BlogIndex extends React.Component {
           }}
         >
           {({ loading, error, data, fetchMore, ...results }) => {
+            console.log(loading, error, data, fetchMore, results)
+
             if (error) return <div />
             if (loading) {
               if (data && data.trainer) {
                 return (
                   <div>
-                    <ExploreFilter />
-                    <TrainerDetails singleTrainerDetails={data.trainer} />
-                    <div style={{ textAlign: "center" }}>
-                      <Spin />
-                    </div>
+                    <div>
+                      <ExploreFilter />
+                      <TrainerDetails singleTrainerDetails={data.trainer} />
+                      <div style={{ textAlign: "center" }}>
+                        <Spin />
+                      </div>
 
-                    <div style={{ textAlign: "center" }}>
-                      <BrandedButton
-                        content="Show All"
-                        handelClick={() => this.showMore()}
-                      />
+                      <div style={{ textAlign: "center" }}>
+                        <BrandedButton
+                          content="Show All"
+                          handelClick={() => this.showMore()}
+                        />
+                      </div>
                     </div>
                   </div>
                 )

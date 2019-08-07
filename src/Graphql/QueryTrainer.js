@@ -4,6 +4,7 @@ const moment = require("moment")
 export default gql`
   query trainer($trainerID: ID!, $limit: Int, $from: DateTime!) {
     trainer(id: $trainerID) {
+      id
       name
       avatar
       bio
@@ -17,10 +18,12 @@ export default gql`
         duration
         startAt
         owner {
+          id
           cover
           name
         }
         trainers {
+          id
           name
         }
       }
