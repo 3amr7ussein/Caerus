@@ -63,7 +63,23 @@ class Login extends Component {
             appId="353050132290200"
             fields="name,email,picture"
             callback={responseFacebook}
+            icon="fa-facebook"
+            buttonStyle={{
+              width: "100%",
+              padding: 10,
+              textTransform: "none",
+              fontSize: 12,
+              fontWeight: "normal",
+              borderRadius: 8,
+              background: " #2D70BE",
+              color: "white",
+              border: 0,
+              textAlign: "center",
+              display: "inline-block",
+            }}
+            textButton="Continue with Facebook"
           />
+
           <Divider>or</Divider>
           <div className={style.input}>
             <p>Email Address or Mobile Number</p>

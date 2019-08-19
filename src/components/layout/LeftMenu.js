@@ -7,16 +7,16 @@ class LeftMenu extends Component {
     return (
       <Menu mode="horizontal">
         <Menu.Item key="_01">
-          <Link href="">Home</Link>
+          <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item key="_02">
-          <Link href="">About us</Link>
+          <Link to="">About us</Link>
         </Menu.Item>
         <Menu.Item key="_03">
-          <Link href="">Contact us</Link>
+          <Link to="">Contact us</Link>
         </Menu.Item>
         <Menu.Item key="_04">
-          <Link href="">Download</Link>
+          <Link to="">Download</Link>
         </Menu.Item>
         <Menu.Item key="_05">
           <Link to="/q&a">Help</Link>

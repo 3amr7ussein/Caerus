@@ -58,6 +58,13 @@
     }
   }
 }
+.exploreInput {
+  :global {
+    .ant-input:not(:first-child) {
+      padding-left: 40px;
+    }
+  }
+}
 .filterSearch {
   margin-top: 24px;
   height: 48px;

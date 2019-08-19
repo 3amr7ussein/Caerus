@@ -45,7 +45,7 @@ class RightMenu extends Component {
       <div>
         <Menu mode="horizontal">
           <Menu.Item key="_01">
-            <Link href="">List your business</Link>
+            <Link to="">List your business</Link>
           </Menu.Item>
           <Menu.Item key="_02">
             {this.props.user.isAuthenticated ? (

@@ -8,6 +8,21 @@ import { StaticQuery, graphql } from "gatsby"
 import FooterList from "../footer-list"
 
 export default class Footer extends Component {
+  state = {
+    showLoginModalSection: false,
+    showRegisterModalSection: false,
+  }
+
+  showLoginModal(showLoginModalSection) {
+    this.setState({
+      showLoginModalSection,
+    })
+  }
+  showRegisterModal(showRegisterModalSection) {
+    this.setState({
+      showRegisterModalSection,
+    })
+  }
   render() {
     return (
       <StaticQuery
@@ -27,9 +42,13 @@ export default class Footer extends Component {
                         title={"Caerus"}
                         list={[
                           { link: "/", title: "Home" },
-                          { link: "/about", title: "About" },
-                          { link: "/contact-us", title: "Register" },
-                          { link: "/privacypolicy", title: "Login" },
+                          { link: "/404", title: "About" },
+                          { link: "/404", title: "Register" },
+                          {
+                            link: "/404",
+                            // onClick:{onClick= this.showLoginModal(true)},
+                            title: "Login",
+                          },
                         ]}
                       />
                     </Col>
@@ -38,12 +57,12 @@ export default class Footer extends Component {
                         title={"Caerus"}
                         list={[
                           {
-                            link: "/project-discover",
+                            link: "/404",
                             title: "List your business",
                           },
-                          { link: "/project-home", title: "Press" },
-                          { link: "/project-ventures", title: "FQA's" },
-                          { link: "/project-events", title: "Link 4" },
+                          { link: "/404", title: "Press" },
+                          { link: "/q&a", title: "FQA's" },
+                          { link: "/404", title: "Link 4" },
                         ]}
                       />
                     </Col>
@@ -51,10 +70,10 @@ export default class Footer extends Component {
                       <FooterList
                         title={"Caerus"}
                         list={[
-                          { link: "/register", title: "Terms of services" },
-                          { link: "/login", title: "privacy policy" },
-                          { link: "/blog", title: "Contact Us" },
-                          { link: "/help", title: "Link 4" },
+                          { link: "/404", title: "Terms of services" },
+                          { link: "/404", title: "privacy policy" },
+                          { link: "/404", title: "Contact Us" },
+                          { link: "/404", title: "Link 4" },
                         ]}
                       />
                     </Col>

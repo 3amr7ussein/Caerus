@@ -5,6 +5,7 @@ import BrandedButton from "../../brandedButton/BrandedButton"
 import { connect } from "react-redux"
 import LoginActions from "../../../Redux/LoginRedux"
 import { Field, reduxForm } from "redux-form"
+import FacebookLogin from "react-facebook-login"
 import {
   required,
   email,
@@ -40,6 +41,10 @@ class Register extends Component {
     function onChange(e) {
       console.log(`checked = ${e.target.checked}`)
     }
+    const responseFacebook = response => {
+      console.log(response)
+    }
+
     const { handleSubmit, submitting } = this.props
     return (
       <div>
@@ -50,9 +55,26 @@ class Register extends Component {
           visible={this.props.Visibility || false}
           onCancel={this.props.onCancel}
         >
-          <Button className={style.fbButton} block>
-            Continue with Facebook
-          </Button>
+          <FacebookLogin
+            appId="353050132290200"
+            fields="name,email,picture"
+            callback={responseFacebook}
+            icon="fa-facebook"
+            buttonStyle={{
+              width: "100%",
+              padding: 10,
+              textTransform: "none",
+              fontSize: 12,
+              fontWeight: "normal",
+              borderRadius: 8,
+              background: " #2D70BE",
+              color: "white",
+              border: 0,
+              textAlign: "center",
+              display: "inline-block",
+            }}
+            textButton="Continue with Facebook"
+          />
           <Divider>or</Divider>
 
           <div className={style.inputN}>

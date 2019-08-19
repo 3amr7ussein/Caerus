@@ -1,7 +1,10 @@
 import React, { Component } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import style from "./style.module.scss"
-import { Input, DatePicker } from "antd"
+import { Input, Icon, DatePicker } from "antd"
+import ic_search from "../../../static/Images/ic_search.png"
+import ic_location from "../../../static/Images/ic_location.png"
+import ic_nearMe from "../../../static/Images/ic_nearMe.png"
 
 import RoundedLink from "../../components/RoundedLink/RoundedLink"
 
@@ -48,12 +51,36 @@ export default class Explore extends Component {
                   </p>
                   <InputGroup compact className={style.inputGroup}>
                     <Input
+                      className={style.exploreInput}
                       style={{ width: "35%" }}
-                      defaultValue="input content"
+                      placeholder="Explore and Book Now"
+                      prefix={
+                        <img
+                          src={ic_search}
+                          alt="/"
+                          style={{ paddingTop: 25 }}
+                        />
+                      }
                     />
+
                     <Input
+                      className={style.exploreInput}
                       style={{ width: "25%" }}
-                      defaultValue="input content"
+                      placeholder="Location"
+                      prefix={
+                        <img
+                          src={ic_location}
+                          alt="/"
+                          style={{ paddingTop: 25 }}
+                        />
+                      }
+                      suffix={
+                        <img
+                          src={ic_nearMe}
+                          alt="/"
+                          style={{ paddingTop: 27 }}
+                        />
+                      }
                     />
                     <DatePicker style={{ width: "20%" }} />
                     <RoundedLink

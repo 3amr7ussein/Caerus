@@ -14,6 +14,7 @@ export default class FooterList extends Component {
                 key={`_${index}`}
                 rel="noopener noreferrer"
                 to={a.link}
+                onClick={() => a.onClick}
                 // key={a.link}
               >
                 {a.title}
