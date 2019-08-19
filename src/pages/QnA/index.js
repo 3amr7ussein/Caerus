@@ -20,7 +20,9 @@ class BlogIndex extends React.Component {
           title="Q&A Page"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-
+        <div
+          style={{ width: "100%", height: 64, backgroundColor: "#ff4200" }}
+        />
         <QandA />
         <section />
       </Layout>

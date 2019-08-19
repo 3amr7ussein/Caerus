@@ -34,7 +34,6 @@ export default class ExploreFilter extends Component {
               }}
             >
               <div className={style.boxStyle}>
-                <div className={style.navDiv} />
                 <div className={style.discoverWrapper}>
                   <Content>
                     {/* <div> */}

@@ -34,6 +34,13 @@ class BlogIndex extends React.Component {
                 title="TrainerDetails Page"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
               />
+              <div
+                style={{
+                  width: "100%",
+                  height: 64,
+                  backgroundColor: "#ff4200",
+                }}
+              />
               <ExploreFilter />
               <ClassDetails singleClassDetails={data.singleWorkClass} />
               <section />

@@ -31,7 +31,13 @@ class BlogIndex extends React.Component {
                 title="MyFavoriteClasses Page"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
               />
-
+              <div
+                style={{
+                  width: "100%",
+                  height: 64,
+                  backgroundColor: "#ff4200",
+                }}
+              />
               <MyFavorite myFav={data.me.favClasses} />
               <section />
             </Layout>

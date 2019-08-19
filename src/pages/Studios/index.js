@@ -86,6 +86,13 @@ class BlogIndex extends React.Component {
             if (data && data.place)
               return (
                 <>
+                  <div
+                    style={{
+                      width: "100%",
+                      height: 64,
+                      backgroundColor: "#ff4200",
+                    }}
+                  />
                   <ExploreFilter />
                   <StudioDetails placeDetails={data.place} />
 

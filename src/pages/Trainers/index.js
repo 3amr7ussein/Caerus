@@ -54,6 +54,13 @@ class BlogIndex extends React.Component {
                 return (
                   <div>
                     <div>
+                      <div
+                        style={{
+                          width: "100%",
+                          height: 64,
+                          backgroundColor: "#ff4200",
+                        }}
+                      />
                       <ExploreFilter />
                       <TrainerDetails singleTrainerDetails={data.trainer} />
                       <div style={{ textAlign: "center" }}>

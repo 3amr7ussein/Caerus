@@ -13,6 +13,9 @@ class NotFoundPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO />
         <div
+          style={{ width: "100%", height: 64, backgroundColor: "#ff4200" }}
+        />
+        <div
           style={{
             display: "flex",
             justifyContent: "center",

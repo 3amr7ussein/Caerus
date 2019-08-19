@@ -31,7 +31,13 @@ class BlogIndex extends React.Component {
                 title="MyBookingClasses Page"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
               />
-
+              <div
+                style={{
+                  width: "100%",
+                  height: 64,
+                  backgroundColor: "#ff4200",
+                }}
+              />
               <MyClasses myClasses={data.me.classes} />
               <section />
             </Layout>

@@ -34,6 +34,9 @@ class BlogIndex extends React.Component {
           title="Explore Page"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
+        <div
+          style={{ width: "100%", height: 64, backgroundColor: "#ff4200" }}
+        />
         <ExploreFilter />
         <ExplorePopular Home={this.props.home} />
       </Layout>
