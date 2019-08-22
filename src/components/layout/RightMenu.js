@@ -8,19 +8,18 @@ import Register from "../Modal/Register"
 import FirebaseImage from "../FirebaseTmage/index.js"
 
 const menu =
-  // <Menu>
-  //   <Menu.Item key="0">
-  //     <Link to="/myProfile/">My Profile</Link>
-  //   </Menu.Item>
-  //   <Menu.Item key="1">
-  //     <Link to="/myBooking">My Booking</Link>
-  //   </Menu.Item>
+  <Menu>
+    <Menu.Item key="0">
+      <Link to="/myProfile/">My Profile</Link>
+    </Menu.Item>
+    <Menu.Item key="1">
+      <Link to="/myBooking">My Booking</Link>
+    </Menu.Item>
 
-  //   <Menu.Item key="3">
-  //     <Link to="/myFav">My Favorite</Link>
-  //   </Menu.Item>
-  // </Menu>
-  null
+    <Menu.Item key="3">
+      <Link to="/myFav">My Favorite</Link>
+    </Menu.Item>
+  </Menu>
 
 class RightMenu extends Component {
   state = {
