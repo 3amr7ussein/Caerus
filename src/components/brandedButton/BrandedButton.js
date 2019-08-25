@@ -5,7 +5,7 @@ import style from "./style.module.scss"
 
 class BrandedButton extends React.Component {
   render() {
-    const { content, styles, redirect, handleClick, handelClick } = this.props
+    const { content, styles, redirect, handleClick, handelClick, Icon } = this.props
     return (
       <Button
         // size="large"
@@ -14,6 +14,7 @@ class BrandedButton extends React.Component {
         href={redirect}
         onClick={handelClick || handleClick}
       >
+        {Icon}
         {content}
       </Button>
     )
