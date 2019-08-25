@@ -1,10 +1,11 @@
 import React from "react"
+import MyProfileClasses from "./classes"
 
 class MyProfile extends React.Component {
   render() {
     return (
       <div>
-        <h1>MY Profile Page</h1>
+        <MyProfileClasses />
       </div>
     )
   }
