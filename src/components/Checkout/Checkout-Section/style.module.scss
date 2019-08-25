@@ -1,0 +1,29 @@
+.container{
+  background-color: white;
+}
+
+
+.walletContainer{
+
+  border: 1px solid green;
+  padding :7px;
+}
+.walletContainer p{
+margin: 0;
+}
+
+
+.textRight{
+  text-align: right;
+}
+.buttonDiv{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.button{
+  background-color: $brandOrange;
+  color: white;
+padding : 0 50px;
+
+}

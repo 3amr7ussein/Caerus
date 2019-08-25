@@ -57,8 +57,9 @@ export default class HomeClasses extends Component {
                             height: 44,
                             width: 300,
                           }}
+                          redirect="/confirmation"
                           content="Book"
-                          handelClick={() => this.showBookingModal(true)}
+                         
                         />
                       </div>
                     </List.Item>

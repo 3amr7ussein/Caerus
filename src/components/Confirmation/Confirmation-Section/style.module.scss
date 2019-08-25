@@ -1,0 +1,43 @@
+
+.textRight{
+  text-align: right;
+}
+.buttonDiv{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.container{
+  
+  background-color : white;
+  font-family: Helvetica;
+  padding :20px;
+  border : 1px solid #ccc;
+}
+
+.information{
+  border-radius: 50px;
+  border : 1px solid #ccc;
+}
+h5{
+  color : black;
+
+  
+}
+.button {
+  background-color: $brandOrange;
+  // font-family: open sans condensed;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: none;
+  color: white;
+  border-color: transparent;
+  :global {
+    a.ant-btn {
+      line-height: 48px;
+    }
+  }
+}
+
