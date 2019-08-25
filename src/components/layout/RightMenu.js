@@ -7,8 +7,7 @@ import Login from "../Modal/Login"
 import Register from "../Modal/Register"
 import FirebaseImage from "../FirebaseTmage/index.js"
 
-const menu = (
-  <Menu>
+const menu =  <Menu>
     <Menu.Item key="0">
       <Link to="/myProfile/">My Profile</Link>
     </Menu.Item>
@@ -20,7 +19,7 @@ const menu = (
       <Link to="/myFav">My Favorite</Link>
     </Menu.Item>
   </Menu>
-)
+
 
 class RightMenu extends Component {
   state = {

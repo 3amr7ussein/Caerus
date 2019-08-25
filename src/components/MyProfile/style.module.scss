@@ -1,0 +1,66 @@
+.sectionStyle{
+    // background-color: #42aafe;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.imgContainer{
+
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center
+    
+}
+
+h3{
+    padding: 0;
+    margin: 0;
+}
+
+.ChangePassStyle{
+
+    color: #ff4200
+    
+}
+
+p{
+    color: #6c757d;
+    margin-bottom: 50px
+}
+
+// Watch out this is just Global not involved in a class or some to prevent this hover action from all the buttons
+// but don't warry no buttons contains icons know except these two So ... I couldn't find solution for it till know.  
+  
+:global{
+
+
+            .ant-btn:hover .anticon{
+            color: #ff4200 !important;
+            }
+    
+
+            
+.ant-tabs-nav-wrap {
+
+    width: 60%;
+    margin: 0 auto;
+
+}
+}
+
+    
+
+
+
+$colorWhite: #fff;
+$brandGreen: #5ccdb0;
+$brandCoral: #fe6b52;
+$brandGrey: #9b9b9b;
+$brandDarkGrey: #4a4a4a;
+$brandOrange: #ff4200;
+$brandDarkBlue: #0c141f;
