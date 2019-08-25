@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Header from './Header';
 import { Tabs } from 'antd';
@@ -23,8 +24,8 @@ class MyProfile extends Component {
 
     return(
 
-      <div>
 
+      <div>
       <Header />
         <Tabs defaultActiveKey="1" onChange={callback} style={{ justifyContent:"center" ,margin:"0 auto"}}>
 
@@ -44,6 +45,7 @@ class MyProfile extends Component {
 
          
         </Tabs>
+
 
       </div>
    
