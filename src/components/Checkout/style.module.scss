@@ -1,0 +1,25 @@
+.discoverWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: $containerWidth;
+  
+  
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+.container{
+  padding-top: 30px;
+  
+}
+  
+
+ul{
+  font-size:13px;
+ list-style-type: none;
+ color:black;
+
+}

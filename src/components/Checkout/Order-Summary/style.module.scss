@@ -1,0 +1,44 @@
+.discoverWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+.textRight{
+  text-align: right;
+}
+.orderSummary{
+  padding : 10px;
+  border:1px solid #ccc;
+  background-color:white;
+}
+.list{
+  list-style-type: none;
+  margin-left: 0;
+  font-family: Helvetica;
+  color:black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.list h6{
+  font-size : 13px;
+  font-family: Helvetica;
+  color:#9b9b9b;
+
+}
+
+.line{
+  height : 1px;
+  background-color: #9b9b9b;
+  margin-bottom : 10px;
+}
+
+h5{
+  color:$brandOrange;
+}
