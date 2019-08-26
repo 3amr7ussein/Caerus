@@ -1,31 +1,25 @@
-
-import React, { Component } from 'react';
-import Header from './Header';
-import { Tabs } from 'antd';
+import React, { Component } from "react"
+import Header from "./Header"
+import { Tabs } from "antd"
 import style from "./style.module.scss"
 import ProfilePayment from './ProfilePayment/index';
 
-const { TabPane } = Tabs;
+const { TabPane } = Tabs
 
 function callback(key) {
-  console.log(key);
+  console.log(key)
 }
 
 class MyProfile extends Component {
+  constructor() {
+    super()
 
-  constructor(){
-    super();
-
-    this.state = {
-      
-    }
+    this.state = {}
   }
 
-  render(){
-
-    return(
-
-
+  render() {
+    console.log("ProfileData", this.props.myData)
+return(
       <div className = {style.discoverWrapper}>
       <Header />
         <Tabs defaultActiveKey="1" onChange={callback} style={{ justifyContent:"center" ,margin:"0 auto"}}>
@@ -43,17 +37,12 @@ class MyProfile extends Component {
           <TabPane tab="Settings" key="4">
             Settings
           </TabPane>
-
-         
         </Tabs>
-
-
+        
       </div>
-   
-
-
+      
     )
   }
 }
 
-export default MyProfile;
+export default MyProfile
