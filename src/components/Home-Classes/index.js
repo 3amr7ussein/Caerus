@@ -5,6 +5,7 @@ import style from "./style.module.scss"
 import StyledHN from "../styled-hn"
 import CardData from "../Card"
 import BrandedButton from "../brandedButton/BrandedButton"
+import RoundedLink from "../RoundedLink/RoundedLink"
 
 const { Content } = Layout
 
@@ -52,7 +53,7 @@ export default class HomeClasses extends Component {
                             place={item.owner.name}
                           />
                         </Link>
-                        <BrandedButton
+                        <RoundedLink
                           styles={{
                             height: 44,
                             width: 300,
@@ -67,7 +68,7 @@ export default class HomeClasses extends Component {
                 />
               </div>
               <div style={{ textAlign: "center" }}>
-                <BrandedButton
+                <RoundedLink
                   content="Show All"
                   styles={{ marginBottom: 96, marginTop: 20 }}
                 />

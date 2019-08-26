@@ -1,11 +1,20 @@
-.sectionStyle {
-  // background-color: #42aafe;
-  width: 60%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 50px;
+.discoverWrapper {
+    margin: 0px auto;
+    max-width: $containerWidth;
+  }
+  @media (max-width: $containerWidth) {
+    .discoverWrapper {
+      padding: 0px 30px;
+    }
+  }
+.sectionStyle{
+    // background-color: #42aafe;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .imgContainer {
