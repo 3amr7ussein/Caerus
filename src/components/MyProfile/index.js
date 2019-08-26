@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import { Tabs } from 'antd';
 import style from "./style.module.scss"
+import ProfilePayment from './ProfilePayment/index';
 
 const { TabPane } = Tabs;
 
@@ -25,7 +26,7 @@ class MyProfile extends Component {
     return(
 
 
-      <div>
+      <div className = {style.discoverWrapper}>
       <Header />
         <Tabs defaultActiveKey="1" onChange={callback} style={{ justifyContent:"center" ,margin:"0 auto"}}>
 
@@ -37,7 +38,7 @@ class MyProfile extends Component {
             Favorites
           </TabPane>
           <TabPane tab="Payment" key="3">
-            Payment
+            <ProfilePayment />
           </TabPane>
           <TabPane tab="Settings" key="4">
             Settings

@@ -54,6 +54,11 @@ exports.createPages = ({ graphql, actions }) => {
     matchPath: "/confirmation/",
     component: path.resolve(`src/pages/OrderConfirmation/index.js`),
   })
+  createPage({
+    path: "/success/*",
+    matchPath: "/success/",
+    component: path.resolve(`src/pages/SuccessPayment/index.js`),
+  })
   return null
 }
 

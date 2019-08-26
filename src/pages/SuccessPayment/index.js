@@ -1,48 +1,33 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Query } from "react-apollo"
-import { graphQLClient } from "../../Services/Api"
-
 import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
-import Confirmation from '../../components/Confirmation/index'
-
-import QueryMe from "../../Graphql/QueryMe"
-
+import Success from '../../components/PaymentSuccess/index' 
 class BlogIndex extends React.Component {
 
     render() {
+
         const { data } = this.props
 
         const siteTitle = data.site.siteMetadata.title
-        return (
-          <Query
-          client={graphQLClient}
-          query={QueryMe}
-          fetchPolicy={"network-only"}
-          >
-            {({ loading, error, data, ...results }) => {
-              if (error || loading) return null
-    
+  
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="Confirmation"
+          title="Success"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <div
           style={{ width: "100%", height: 64, backgroundColor: "#ff4200" }}
         />
-        <Confirmation />
+        <Success />
         <section />
       </Layout>
     )
-  }}
-  </Query>
-)
+  }
 }
-}
+
 export default BlogIndex
 
 export const pageQuery = graphql`

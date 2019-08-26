@@ -5,25 +5,69 @@
 .buttonDiv{
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top:20px;
 }
 
-.container{
+.container {
   
   background-color : white;
   font-family: Helvetica;
-  padding :20px;
+  padding :10px;
   border : 1px solid #ccc;
-}
+  line-height: 30px;
 
+}
+p{
+  font-size:12px;
+  font-weight: bold;
+  color:#aaa;
+  margin-bottom: 0;
+}
 .information{
-  border-radius: 50px;
+  border-radius: 5px;
   border : 1px solid #ccc;
-}
-h5{
+  padding : 10px;
   color : black;
-
+  font-size : 18px;
   
+}
+
+
+.information h2 {
+  font-size:18px;
+  margin-top : 10px;
+
+}
+
+.information h3 { 
+  font-size :14px;
+  font-weight: bold;
+  color : #ccc;
+  padding: 6px 0;
+
+}
+
+.dashedLine{
+  height : 1px;
+  border-top : 1px dashed #dcd;
+  margin: 20px auto;
+ 
+}
+.money{
+  font-size : 12px;
+  font-weight: bold;
+}
+.money i{
+  
+  padding:0 10px;
+  border-radius: 30%;
+  background-color:#888;
+  color:white;
+  height: 1px;
+  text-align: center;
+  width : 30px;
+  
+
 }
 .button {
   background-color: $brandOrange;
