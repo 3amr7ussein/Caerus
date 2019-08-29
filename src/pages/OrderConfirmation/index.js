@@ -5,25 +5,15 @@ import { graphQLClient } from "../../Services/Api"
 
 import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
-import Confirmation from '../../components/Confirmation/index'
+import Confirmation from "../../components/Confirmation/index"
 
 import QueryMe from "../../Graphql/QueryMe"
 
 class BlogIndex extends React.Component {
+  render() {
+    const { data } = this.props
 
-    render() {
-        const { data } = this.props
-
-        const siteTitle = data.site.siteMetadata.title
-        return (
-          <Query
-          client={graphQLClient}
-          query={QueryMe}
-          fetchPolicy={"network-only"}
-          >
-            {({ loading, error, data, ...results }) => {
-              if (error || loading) return null
-    
+    const siteTitle = data.site.siteMetadata.title
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -38,11 +28,9 @@ class BlogIndex extends React.Component {
         <section />
       </Layout>
     )
-  }}
-  </Query>
-)
+  }
 }
-}
+
 export default BlogIndex
 
 export const pageQuery = graphql`

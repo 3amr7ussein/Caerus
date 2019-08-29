@@ -1,73 +1,62 @@
-
-.textRight{
+.textRight {
   text-align: right;
 }
-.buttonDiv{
+.buttonDiv {
   display: flex;
   justify-content: center;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .container {
-  
-  background-color : white;
+  background-color: white;
   font-family: Helvetica;
-  padding :10px;
-  border : 1px solid #ccc;
+  padding: 10px;
+  border: 1px solid #ccc;
   line-height: 30px;
-
 }
-p{
-  font-size:12px;
+.com p {
+  font-size: 12px;
   font-weight: bold;
-  color:#aaa;
+  color: #aaa;
   margin-bottom: 0;
 }
-.information{
+.information {
   border-radius: 5px;
-  border : 1px solid #ccc;
-  padding : 10px;
-  color : black;
-  font-size : 18px;
-  
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: black;
+  font-size: 18px;
 }
-
 
 .information h2 {
-  font-size:18px;
-  margin-top : 10px;
-
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-.information h3 { 
-  font-size :14px;
+.information h3 {
+  font-size: 14px;
   font-weight: bold;
-  color : #ccc;
+  color: #ccc;
   padding: 6px 0;
-
 }
 
-.dashedLine{
-  height : 1px;
-  border-top : 1px dashed #dcd;
+.dashedLine {
+  height: 1px;
+  border-top: 1px dashed #dcd;
   margin: 20px auto;
- 
 }
-.money{
-  font-size : 12px;
+.money {
+  font-size: 12px;
   font-weight: bold;
 }
-.money i{
-  
-  padding:0 10px;
+.money i {
+  padding: 0 10px;
   border-radius: 30%;
-  background-color:#888;
-  color:white;
+  background-color: #888;
+  color: white;
   height: 1px;
   text-align: center;
-  width : 30px;
-  
-
+  width: 30px;
 }
 .button {
   background-color: $brandOrange;
@@ -84,4 +73,3 @@ p{
     }
   }
 }
-

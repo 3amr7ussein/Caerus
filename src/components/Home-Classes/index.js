@@ -11,7 +11,7 @@ const { Content } = Layout
 
 export default class HomeClasses extends Component {
   render() {
-    // console.log("HomeClasses", this.props.homeClasses)
+    console.log("HomeClasses", this.props.homeClasses)
 
     return (
       <section
@@ -51,24 +51,17 @@ export default class HomeClasses extends Component {
                             time={item.startAt}
                             trainer={item.trainers[0].name}
                             place={item.owner.name}
+                            available={item.availablePlaces}
+                            price={item.price}
                           />
                         </Link>
-                        <RoundedLink
-                          styles={{
-                            height: 44,
-                            width: 300,
-                          }}
-                          redirect="/confirmation"
-                          content="Book"
-                         
-                        />
                       </div>
                     </List.Item>
                   )}
                 />
               </div>
               <div style={{ textAlign: "center" }}>
-                <RoundedLink
+                <BrandedButton
                   content="Show All"
                   styles={{ marginBottom: 96, marginTop: 20 }}
                 />
