@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-import React, { Component } from "react";
-import style from "./style.module.scss";
-import { Collapse , Col ,Row} from 'antd';
-import BrandedButton from '../brandedButton/BrandedButton';
-import imgg from '../../../static/Images/img_successPayment.jpg';
-
-=======
 import React, { Component } from "react"
 import style from "./style.module.scss"
 import { Collapse, Col, Row } from "antd"
 import BrandedButton from "../brandedButton/BrandedButton"
 import imgg from "../../../static/Images/img_bookingSuccses.png"
->>>>>>> ecbac0a24c3f1e1e3937c99c72f2a0f0d1383316
 
 class Success extends Component {
   render() {
