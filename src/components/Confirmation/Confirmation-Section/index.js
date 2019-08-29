@@ -60,7 +60,7 @@ render(){
                 fontSize : 14,
                 
             }}
-           >Checkout</BrandedButton>   
+           ></BrandedButton>   
         </div>
         </div>
     )

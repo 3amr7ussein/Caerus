@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import style from "./style.module.scss";
 import { Collapse , Col ,Row} from 'antd';
 import BrandedButton from '../brandedButton/BrandedButton';
-import imgg from '../../../public/Images/successPayment.jpg'
+import imgg from '../../../static/Images/img_successPayment.jpg';
 
 
 class Success extends Component {

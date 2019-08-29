@@ -1,0 +1,20 @@
+.myCards{
+    padding :10px;
+    border : 1px solid #ddd;  
+}
+.walletContainer{
+    border : 1.5px solid greenyellow;
+     padding : 30px;
+    border-radius: 2px;
+    }
+.walletIMG{
+    display : block ;
+     margin : 20px auto;
+}
+.walletContainer .balance{
+    text-align : center ;
+     font-size : 24px ;
+     font-weight : bold;
+    margin-bottom : 10px; 
+    color : $brandOrange
+}

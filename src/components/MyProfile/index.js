@@ -23,7 +23,7 @@ return(
       <div className = {style.discoverWrapper}>
       <Header  userInfo = {this.props.myData}/>
         <Tabs 
-        defaultActiveKey="1" onChange={callback} >
+        defaultActiveKey="1" onChange={callback}  style={{justifyContent: "center", margin: "0 auto"}} >
 
       
           <TabPane tab="My Classes" key="1" style={{ backgroundColor:'blue'}} >
