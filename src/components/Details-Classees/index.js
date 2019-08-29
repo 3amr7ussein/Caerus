@@ -5,9 +5,8 @@ import style from "./style.module.scss"
 import Data from "../Data"
 import About from "../About"
 import ClassAbout from "./Class-About/ClassAbout"
-import FilterOptions from "../Explore-Filter/Filter-Options"
-import ClassTime from "./Class-Time"
 import FirebaseImage from "../FirebaseTmage"
+import BrandedButton from "../brandedButton/BrandedButton"
 
 const { Content } = Layout
 
@@ -35,14 +34,14 @@ export default class ClassDetails extends Component {
                   />
                 </div>
 
-                <div className={style.discoverWrapper}>
+                {/* <div className={style.discoverWrapper}>
                   <div style={{ paddingBottom: 32 }}>
                     <FilterOptions />
                   </div>
-                </div>
-                <div className={style.discoverWrapper}>
+                </div> */}
+                {/* <div className={style.discoverWrapper}>
                   <ClassTime />
-                </div>
+                </div> */}
 
                 <About
                   aboutHead="Class Overview"
@@ -53,6 +52,16 @@ export default class ClassDetails extends Component {
                 </div>
 
                 <Data branch={this.props.singleClassDetails.branch} />
+                <div style={{ textAlign: "center" }}>
+                  <BrandedButton
+                    redirect={`/confirmation/${
+                      this.props.singleClassDetails.id
+                    }`}
+                    // redirect="/confirmation"
+                    content="Book"
+                    styles={{ lineHeight: 2 }}
+                  />
+                </div>
               </section>
             </Content>
           )

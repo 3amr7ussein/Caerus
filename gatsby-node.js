@@ -51,7 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
   })
   createPage({
     path: "/confirmation/*",
-    matchPath: "/confirmation/",
+    matchPath: "/confirmation/:id",
     component: path.resolve(`src/pages/OrderConfirmation/index.js`),
   })
   createPage({
