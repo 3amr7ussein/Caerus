@@ -19,6 +19,7 @@ class MyProfile extends Component {
 
   render() {
     console.log("ProfileData", this.props.myData)
+
     return (
       <div className={style.discoverWrapper}>
         <Header userInfo={this.props.myData} />
@@ -28,6 +29,7 @@ class MyProfile extends Component {
           style={{ justifyContent: "center", margin: "0 auto" }}
         >
           <TabPane tab="My Classes" key="1" style={{ backgroundColor: "blue" }}>
+
             My Classes
           </TabPane>
           <TabPane tab="Favorites" key="2">
@@ -36,7 +38,7 @@ class MyProfile extends Component {
           <TabPane tab="Payment" key="3">
             <ProfilePayment />
           </TabPane>
-          <TabPane tab="Settings" key="4">
+          <TabPane tab="Edit Profile" key="4">
             Settings
           </TabPane>
         </Tabs>

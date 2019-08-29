@@ -26,6 +26,25 @@ class ConfirmationSection extends Component {
                   <h3>Date</h3>
                   Wednesday, 14 April 2019
                 </div>
+
+            </div>
+     
+        <div className = {style.con}><p className={style.textRight}>Secure Checkout</p></div>
+       <div className = {style.buttonDiv}> 
+            <BrandedButton className = {style.button}
+            redirect="/checkout"
+            content = "Checkout"
+            styles = {{
+                height : 'auto',
+                width : 150,
+                paddingLeft : 30,
+                paddingRight : 30,
+                
+                fontSize : 14,
+                
+            }}
+           >Checkout</BrandedButton>   
+
               </Col>
 
               <Col span={7}>
@@ -62,29 +81,8 @@ class ConfirmationSection extends Component {
               </Col>
             </Row>
           </div>
-        </div>
-        <div className={style.com}>
-          <p className={style.textRight}>Secure Checkout</p>
-        </div>
 
-        <div className={style.buttonDiv}>
-          <BrandedButton
-            className={style.button}
-            redirect="/checkout"
-            content="Checkout"
-            styles={{
-              height: "auto",
-              width: 150,
-              paddingLeft: 30,
-              paddingRight: 30,
-
-              fontSize: 14,
-            }}
-          >
-            Checkout
-          </BrandedButton>
-        </div>
-      </div>
+       
     )
   }
 }
