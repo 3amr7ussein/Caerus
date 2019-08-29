@@ -21,8 +21,10 @@ class MyProfile extends Component {
     console.log("ProfileData", this.props.myData)
 return(
       <div className = {style.discoverWrapper}>
-      <Header />
-        <Tabs defaultActiveKey="1" onChange={callback} style={{ justifyContent:"center" ,margin:"0 auto"}}>
+      <Header  userInfo = {this.props.myData}/>
+        <Tabs 
+        
+        defaultActiveKey="1" onChange={callback} >
 
       
           <TabPane tab="My Classes" key="1" style={{ backgroundColor:'blue'}} >
@@ -34,7 +36,7 @@ return(
           <TabPane tab="Payment" key="3">
             <ProfilePayment />
           </TabPane>
-          <TabPane tab="Settings" key="4">
+          <TabPane tab="Edit Profile" key="4">
             Settings
           </TabPane>
         </Tabs>

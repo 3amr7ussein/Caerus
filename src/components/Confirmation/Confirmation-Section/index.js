@@ -46,7 +46,7 @@ render(){
                 </div>
             </div>
      
-        <p className={style.textRight}>Secure Checkout</p>
+        <div className = {style.con}><p className={style.textRight}>Secure Checkout</p></div>
        <div className = {style.buttonDiv}> 
             <BrandedButton className = {style.button}
             redirect="/checkout"

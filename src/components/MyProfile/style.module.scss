@@ -10,18 +10,24 @@
 .sectionStyle{
     // background-color: #42aafe;
     width: 60%;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 50px;
 }
-
+.imgContainer img {
+    max-height: 100%;
+    max-width : 100%;
+    margin : 0;
+}
 .imgContainer {
   margin-right: 20px;
   margin-top: 20px;
+  max-height : 150px;
+  max-width: 150px;
   display: flex;
   align-items: center;
+  overflow: hidden;
   border-radius: 50%;
 }
 
