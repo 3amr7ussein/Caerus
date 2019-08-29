@@ -1,10 +1,11 @@
 import React, { Component } from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import { Card, Rate } from "antd"
+import { Card, Rate, Divider } from "antd"
 import style from "./style.module.scss"
 import FirebaseImage from "../FirebaseTmage"
 import moment from "moment"
+import BrandedButton from "../brandedButton/BrandedButton"
 
 const { Meta } = Card
 
@@ -14,6 +15,7 @@ export default class CardData extends Component {
       cover,
       categories,
       price,
+      available,
       title,
       rate,
       location,
@@ -72,6 +74,20 @@ export default class CardData extends Component {
                       <span className={style.cardLocationText}>{location}</span>
                     </div>
                   ) : null}
+                  <Divider style={{ marginHorizontal: 16 }} />
+                  {this.props.available || this.props.price ? (
+                    <div className={style.cardFooter}>
+                      <span className={style.cardPlacesText}>
+                        {available} Available
+                      </span>
+                      <span className={style.cardPriceText}>{price} EGP</span>
+                    </div>
+                  ) : null}
+                  <BrandedButton
+                    redirect="/confirmation"
+                    content="Book"
+                    styles={{ width: "100%", lineHeight: 2 }}
+                  />
                 </div>
               </Card>
             </div>
