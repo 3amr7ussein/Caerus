@@ -23,7 +23,6 @@ return(
       <div className = {style.discoverWrapper}>
       <Header  userInfo = {this.props.myData}/>
         <Tabs 
-        tabPosition="left"
         defaultActiveKey="1" onChange={callback} >
 
       
