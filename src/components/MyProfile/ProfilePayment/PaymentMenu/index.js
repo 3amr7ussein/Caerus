@@ -9,7 +9,10 @@ class PaymentMenu extends Component {
         active :1,
     }
 
-  
+  handleClick = (activeTab) =>{
+    this.setState({active : activeTab});
+    this.props.parentCallback(activeTab);
+  }
   
 render(){
    var inActiveItemStyle = {
@@ -32,19 +35,19 @@ render(){
                 {/* styling is according to the active list item from state.active */}
                 <li 
                 style = {this.state.active === 1 ? activeItemStyle : inActiveItemStyle}
-                onClick = {()=>{this.setState({ active :1})}}
+                onClick = {()=>{this.handleClick(1)}}
                 >
                 
                     <i></i> My Cards 
                 </li>
 
                 <li style = {this.state.active === 2 ? activeItemStyle : inActiveItemStyle}
-               onClick = {()=>{this.setState({active :2})}}
+               onClick = {()=>{this.handleClick(2)}}
                 ><i></i> Wallet </li>
 
 
                 <li style = {this.state.active === 3 ? activeItemStyle : inActiveItemStyle}
-                onClick = {()=>{this.setState({ active :3 })}}
+                onClick = {()=>{this.handleClick(3)}}
                 ><i></i> Promo Codes </li>
             </ul>
         </div>

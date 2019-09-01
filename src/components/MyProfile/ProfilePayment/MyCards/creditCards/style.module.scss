@@ -1,6 +1,6 @@
 .Card{
-    border : 1px solid greenyellow;
-    padding : 10px;
+    // border : 1.5px solid greenyellow;
+    
     color : #bbb;
 }
 
@@ -22,5 +22,21 @@
     border : 2px solid orange;
 }
 .Card span{
+    color : black;
+}
+.Card ul{
+    list-style-type: none;
+    padding: 0;
+    margin : 0;
+    color : #bbb;
+
+}
+.Card ul li{
+margin-bottom: 0;
+border-radius: 2px;
+padding : 10px;
+}
+
+.cardNumber{
     color : black;
 }
