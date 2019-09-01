@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import style from "./style.module.scss";
 import { Collapse , Col ,Row} from 'antd';
@@ -50,10 +51,9 @@ render(){
 
 
         </div>
+
     )
+  }
 }
 
-}
-
-
-export default ProfilePayment; 
+export default ProfilePayment

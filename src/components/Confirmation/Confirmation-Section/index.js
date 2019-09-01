@@ -44,6 +44,7 @@ render(){
                     <Row className = {style.money}><Col span ={12}><h2>Order Total</h2></Col>
                         <Col span = {12} className = {style.textRight}><h2>162 EGP</h2></Col></Row>
                 </div>
+
             </div>
      
         <div className = {style.con}><p className={style.textRight}>Secure Checkout</p></div>
@@ -66,6 +67,49 @@ render(){
     )
 
 }
+
+
+              </Col>
+
+              <Col span={7}>
+                <div className={style.textRight}>
+                  <h3>Time</h3>
+                  14:00
+                </div>
+              </Col>
+            </Row>
+            <div className={style.dashedLine} />
+            <Row className={style.money}>
+              <Col span={12}>
+                <h3>Subtotal</h3>
+              </Col>
+              <Col span={12} className={style.textRight}>
+                180 EGP
+              </Col>
+              <Col span={7}>
+                <h3>Promo Code Discount</h3>{" "}
+              </Col>
+              <Col span={6}>
+                <i>-10%</i>
+              </Col>
+              <Col span={11} className={style.textRight}>
+                - 18 EGP
+              </Col>
+            </Row>
+            <Row className={style.money}>
+              <Col span={12}>
+                <h2>Order Total</h2>
+              </Col>
+              <Col span={12} className={style.textRight}>
+                <h2>162 EGP</h2>
+              </Col>
+            </Row>
+          </div>
+        </div>
+
+       
+    )
+  }
 
 }
 

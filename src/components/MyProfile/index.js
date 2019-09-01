@@ -21,27 +21,32 @@ class MyProfile extends Component {
     console.log("ProfileData", this.props.myData)
 
     return (
-      <div className={style.discoverWrapper}>
-        <Header userInfo={this.props.myData} />
-        <Tabs
-          defaultActiveKey="1"
-          onChange={callback}
-          style={{ justifyContent: "center", margin: "0 auto" }}
-        >
-          <TabPane tab="My Classes" key="1" style={{ backgroundColor: "blue" }}>
-
-            My Classes
-          </TabPane>
-          <TabPane tab="Favorites" key="2">
-            Favorites
-          </TabPane>
-          <TabPane tab="Payment" key="3">
-            <ProfilePayment />
-          </TabPane>
-          <TabPane tab="Edit Profile" key="4">
-            Settings
-          </TabPane>
-        </Tabs>
+      <div className={style.boxShadow}>
+        <div className={style.discoverWrapper}>
+          <Header userInfo={this.props.myData} />
+          <Tabs
+            defaultActiveKey="1"
+            onChange={callback}
+            // style={{ justifyContent: "center", margin: "0 auto" }}
+          >
+            <TabPane
+              tab="My Classes"
+              key="1"
+              style={{ backgroundColor: "blue" }}
+            >
+              My Classes
+            </TabPane>
+            <TabPane tab="Favorites" key="2">
+              Favorites
+            </TabPane>
+            <TabPane tab="Payment" key="3">
+              <ProfilePayment />
+            </TabPane>
+            <TabPane tab="Edit Profile" key="4">
+              Settings
+            </TabPane>
+          </Tabs>
+        </div>
       </div>
     )
   }
