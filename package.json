@@ -64,6 +64,7 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
     "react-sticky": "^6.0.3",
     "react-typography": "^0.16.19",
     "redux-form": "^8.2.4",

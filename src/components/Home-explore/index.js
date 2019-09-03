@@ -40,15 +40,15 @@ export default class Explore extends Component {
             >
               <div className={style.discoverWrapper}>
                 <div style={{ marginTop: 280 }}>
-                  <h2 className={style.header}>Less Hassle. More Classe.</h2>
-                  <p
+                  <h2 className={style.header}>Less Hassle. More Classes.</h2>
+                  {/* <p
                     style={{
                       color: "white",
                       paddingLeft: 4,
                     }}
                   >
                     Explore and Book Now
-                  </p>
+                  </p> */}
                   <InputGroup compact className={style.inputGroup}>
                     <Input
                       className={style.exploreInput}

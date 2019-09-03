@@ -1,0 +1,42 @@
+.Card{
+    // border : 1.5px solid greenyellow;
+    
+    color : #bbb;
+}
+
+.Card input[type="radio"]{
+    margin-top : 15px; 
+    border-color : yellowgreen;
+}
+.btns div button { 
+    height : 18px;
+    margin-bottom: 5px;
+    width : 100%;
+    font-size: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border : none;
+}
+
+.btns div button:focus{
+    border : 2px solid orange;
+}
+.Card span{
+    color : black;
+}
+.Card ul{
+    list-style-type: none;
+    padding: 0;
+    margin : 0;
+    color : #bbb;
+
+}
+.Card ul li{
+margin-bottom: 0;
+border-radius: 2px;
+padding : 10px;
+}
+
+.cardNumber{
+    color : black;
+}

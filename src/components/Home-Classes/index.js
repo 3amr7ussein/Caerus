@@ -5,12 +5,13 @@ import style from "./style.module.scss"
 import StyledHN from "../styled-hn"
 import CardData from "../Card"
 import BrandedButton from "../brandedButton/BrandedButton"
+import RoundedLink from "../RoundedLink/RoundedLink"
 
 const { Content } = Layout
 
 export default class HomeClasses extends Component {
   render() {
-    // console.log("HomeClasses", this.props.homeClasses)
+    console.log("HomeClasses", this.props.homeClasses)
 
     return (
       <section
@@ -50,17 +51,10 @@ export default class HomeClasses extends Component {
                             time={item.startAt}
                             trainer={item.trainers[0].name}
                             place={item.owner.name}
+                            available={item.availablePlaces}
+                            price={item.price}
                           />
                         </Link>
-                        <BrandedButton
-                          styles={{
-                            height: 44,
-                            width: 300,
-                          }}
-                          redirect="/confirmation"
-                          content="Book"
-                         
-                        />
                       </div>
                     </List.Item>
                   )}

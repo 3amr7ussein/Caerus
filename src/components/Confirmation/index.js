@@ -5,9 +5,13 @@ import Summary from '../Checkout/Order-Summary/index';
 import {Row , Col} from 'antd';
 
 class Confirmation extends Component {
+    
 render(){
+    
     return (
-        <div className={style.discoverWrapper}>
+    // console.log(this.props.info);
+    
+    <div className={style.discoverWrapper}>
             <div className = {style.container}> 
                 <Row>
                     <Col span={16}>

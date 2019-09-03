@@ -61,7 +61,7 @@ export default class Footer extends Component {
                             title: "List your business",
                           },
                           { link: "/404", title: "Press" },
-                          { link: "/q&a", title: "FQA's" },
+                          { link: "/q&a", title: "FAQ's" },
                           { link: "/404", title: "Link 4" },
                         ]}
                       />
@@ -71,8 +71,8 @@ export default class Footer extends Component {
                         title={"Caerus"}
                         list={[
                           { link: "/404", title: "Terms of services" },
-                          { link: "/404", title: "privacy policy" },
-                          { link: "/404", title: "Contact Us" },
+                          { link: "/404", title: "Privacy policy" },
+                          { link: "/404", title: "Contact us" },
                           { link: "/404", title: "Link 4" },
                         ]}
                       />
@@ -128,24 +128,14 @@ export default class Footer extends Component {
                       className={style.socialLink}
                       target="_blank"
                       href="https://twitter.com/TheFrondApp"
-                    >
-                      <FaTwitter />
-                    </a>
-                    {/* <a
-                      rel="noopener noreferrer"
-                      className={style.socialLink}
-                      target="_blank"
-                      href="mailto: info@thefrondapp.com"
-                    >
-                      <FaInbox />
-                    </a> */}
+                    />
                   </div>
                 </Col>
               </Row>
             </section>
             <div>
               <span className={style.copyrights}>
-                MIYI Tech System for software
+                MIYI Tech System for Software
               </span>
               <span className={style.copyrights}>01001388075</span>
               <span className={style.copyrights}>
@@ -154,7 +144,7 @@ export default class Footer extends Component {
             </div>
 
             <span className={style.copyrights}>
-              {`Copyrights © All Rights Reserved ${new Date().getFullYear()} |  MIYI Tech System for software.`}
+              {`Copyrights © All Rights Reserved ${new Date().getFullYear()} |  MIYI Tech System for Software.`}
             </span>
           </footer>
         )}
