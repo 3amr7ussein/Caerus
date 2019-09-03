@@ -21,52 +21,7 @@ class Header extends Component {
         <div className={style.infoContainer}>
           <h3>{this.props.userInfo.name}</h3>
           <p>{this.props.userInfo.email}</p>
-          <div>
-            <BrandedButton
-              Icon={
-                <Icon
-                  type="edit"
-                  theme="filled"
-                  style={{
-                    color: "white",
-                  }}
-                  className={style.onHover}
-                />
-              }
-              content={"Edit Profile"}
-              className={style.BrandedbuttonStyle}
-              styles={{
-                width: "130px",
-                fontSize: "16px",
-                height: "30px",
-                fontWeight: "500",
-              }}
-            />
-
-            <BrandedButton
-              Icon={
-                <Icon
-                  type="lock"
-                  theme="filled"
-                  style={{
-                    color: "#ff4200",
-                  }}
-                />
-              }
-              content={"Change Password"}
-              className={style.ChangePassStyle}
-              styles={{
-                color: "#ff4200",
-                width: "200px",
-                fontSize: "16px",
-                height: "30px",
-                marginLeft: "10px",
-                backgroundColor: "white",
-                border: "1px solid #ff4200",
-                fontWeight: "500",
-              }}
-            />
-          </div>
+          <div />
         </div>
       </section>
     )

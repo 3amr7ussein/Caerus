@@ -11,6 +11,7 @@ export const commonAuthUserObj = `
         classes {
             id
             title
+            
         }
         favClasses { 
             id

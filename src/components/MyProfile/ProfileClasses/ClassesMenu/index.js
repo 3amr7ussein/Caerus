@@ -1,7 +1,9 @@
 import React, { Component } from "react"
 import style from "./style.module.scss"
-import { Collapse, Col, Row } from "antd"
-import { Link } from "gatsby"
+import ic_upcomingClassesActive from "../../../../../static/Images/ic_upcomingClassesActive.png"
+import ic_upcomingClasses from "../../../../../static/Images/ic_upcomingClasses.png"
+import ic_pastClassesActive from "../../../../../static/Images/ic_pastClassesActive.png"
+import ic_pastClasses from "../../../../../static/Images/ic_pastClasses.png"
 
 class PaymentMenu extends Component {
   state = {
@@ -37,7 +39,14 @@ class PaymentMenu extends Component {
               this.handleClick(1)
             }}
           >
-            <i /> My Cards
+            <div style={{ marginRight: 12, display: "inline" }}>
+              {this.state.active === 1 ? (
+                <img src={ic_upcomingClassesActive} />
+              ) : (
+                <img src={ic_upcomingClasses} />
+              )}
+            </div>
+            Upcoming
           </li>
 
           <li
@@ -48,18 +57,15 @@ class PaymentMenu extends Component {
               this.handleClick(2)
             }}
           >
-            <i /> Wallet{" "}
-          </li>
-
-          <li
-            style={
-              this.state.active === 3 ? activeItemStyle : inActiveItemStyle
-            }
-            onClick={() => {
-              this.handleClick(3)
-            }}
-          >
-            <i /> Promo Codes{" "}
+            <div style={{ marginRight: 12, display: "inline" }}>
+              {" "}
+              {this.state.active === 1 ? (
+                <img src={ic_pastClasses} />
+              ) : (
+                <img src={ic_pastClassesActive} />
+              )}
+            </div>
+            Past
           </li>
         </ul>
       </div>
