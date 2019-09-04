@@ -5,10 +5,9 @@ import { Query } from "react-apollo"
 import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
 import { graphQLClient } from "../../Services/Api"
-
+import QuerySingleWorkClass from "../../Graphql/QuerySingleWorkClass"
 import ExploreFilter from "../../components/Explore-Filter/ExploreFilter"
 import ClassDetails from "../../components/Details-Classees"
-import QuerySingleWorkClass from "../../Graphql/QuerySingleWorkClass"
 
 class BlogIndex extends React.Component {
   render() {
@@ -27,7 +26,7 @@ class BlogIndex extends React.Component {
       >
         {({ loading, error, data, ...results }) => {
           if (error || loading) return null
-
+          console.log(data)
           return (
             <Layout location={this.props.location}>
               <SEO

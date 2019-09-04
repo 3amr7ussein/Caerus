@@ -1,30 +1,27 @@
 import React, { Component } from "react"
 import Header from "./Header"
-import { Tabs } from "antd"
+import { Link } from "gatsby"
+import { Tabs, Menu } from "antd"
 import style from "./style.module.scss"
 import ProfilePayment from "./ProfilePayment"
 import ProfileClasses from "./ProfileClasses"
 
 const { TabPane } = Tabs
 
-function callback(key) {
-  console.log(key)
-}
+// function callback(key) {
+//   console.log(key)
 
 class MyProfile extends Component {
-  constructor() {
-    super()
-
-    this.state = {}
-  }
-
   render() {
     console.log("ProfileData", this.props.myData)
 
     return (
       <div className={style.discoverWrapper}>
-        <Header userInfo={this.props.myData} />
-        <Tabs
+        <div classNam={style.boxShadow}>
+          <Header userInfo={this.props.myData} />
+        </div>
+
+        {/* <Tabs
           defaultActiveKey="1"
           onChange={callback}
           // style={{ justifyContent: "center", margin: "0 auto" }}
@@ -36,12 +33,12 @@ class MyProfile extends Component {
             Favorites
           </TabPane>
           <TabPane tab="Payment" key="3">
-            <ProfilePayment />
+          
           </TabPane>
           <TabPane tab="Edit Profile" key="4">
             Settings
           </TabPane>
-        </Tabs>
+        </Tabs> */}
       </div>
     )
   }

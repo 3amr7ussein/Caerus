@@ -19,7 +19,7 @@ class LeftMenu extends Component {
           <Link to="">Download</Link>
         </Menu.Item>
         <Menu.Item key="_05">
-          <Link to="/q&a">Help</Link>
+          <Link to="/q&a">FAQ's</Link>
         </Menu.Item>
       </Menu>
     )
