@@ -6,8 +6,8 @@ import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
 import { graphQLClient } from "../../Services/Api"
 
-import MyClasses from "../../components/MyClasses"
-import QueryGetMyClasses from "../../Graphql/QueryGetMyClasses"
+import MyPayments from "../../components/MyPayments"
+import QueryMe from "../../Graphql/QueryMe"
 
 class BlogIndex extends React.Component {
   render() {
@@ -19,7 +19,7 @@ class BlogIndex extends React.Component {
     return (
       <Query
         client={graphQLClient}
-        query={QueryGetMyClasses}
+        query={QueryMe}
         fetchPolicy={"network-only"}
       >
         {({ loading, error, data, ...results }) => {
@@ -28,7 +28,7 @@ class BlogIndex extends React.Component {
           return (
             <Layout location={this.props.location} title={siteTitle}>
               <SEO
-                title="MyBookingClasses Page"
+                title="My Payments Page"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
               />
               <div
@@ -39,7 +39,7 @@ class BlogIndex extends React.Component {
                 }}
               />
               <Header userInfo={this.props.myData} />
-              <MyClasses myClasses={data.me.classes} />
+              <MyPayments myClasses={data.me.classes} />
               <section />
             </Layout>
           )

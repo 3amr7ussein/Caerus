@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import style from "./style.module.scss";
 import { Collapse , Col ,Row} from 'antd';
-import BrandedButton from '../../../brandedButton/BrandedButton';
+import BrandedButton from '../../brandedButton/BrandedButton';
 import WalletLogo from '../../../../../static/Images/img_wallet.png';
 
 const money = 841;

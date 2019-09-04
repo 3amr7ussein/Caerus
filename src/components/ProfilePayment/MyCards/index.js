@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import style from "./style.module.scss";
 import { Collapse , Col ,Row} from 'antd';
 import CreditCard from './creditCards/index';
-import BrandedButton from '../../../brandedButton/BrandedButton';
+import BrandedButton from '../../brandedButton/BrandedButton';
 
 class MyCards extends Component {
     

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Query } from "react-apollo"
-
+import Header from '../../components/Header/Header';
 import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
 import { graphQLClient } from "../../Services/Api"
@@ -38,6 +38,7 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
+              <Header userInfo={this.props.myData} />
               <MyFavorite myFav={data.me.favClasses} />
               <section />
             </Layout>
