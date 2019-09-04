@@ -59,6 +59,18 @@ exports.createPages = ({ graphql, actions }) => {
     matchPath: "/success/",
     component: path.resolve(`src/pages/SuccessPayment/index.js`),
   })
+  createPage({
+    path: "/mypayments/*",
+    matchPath: "/mypayments/",
+    component: path.resolve(`src/pages/mypayments/index.js`),
+    
+  })
+  createPage({
+    path: "/editprofile/*",
+    matchPath: "/editprofile/",
+    component: path.resolve(`src/pages/editProfile/index.js`),
+
+  })
   return null
 }
 

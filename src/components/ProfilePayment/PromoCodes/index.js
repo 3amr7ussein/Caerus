@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import style from "./style.module.scss";
 import { Collapse , Col ,Row} from 'antd';
-import BrandedButton from '../../../brandedButton/BrandedButton';
+import BrandedButton from '../../brandedButton/BrandedButton';
 import PromoCodesList from './PromoCodesList/index';
 class PromoCodes extends Component {
     

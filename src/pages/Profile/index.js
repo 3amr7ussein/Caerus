@@ -38,6 +38,7 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
+              
               <MyProfile myData={data.me} />
               <section />
             </Layout>
