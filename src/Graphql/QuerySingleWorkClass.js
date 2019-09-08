@@ -1,5 +1,6 @@
 import gql from "graphql-tag"
 import { commonClassObj } from "./Common"
+
 export default gql`
 query SingleWorkClass($classID: ID!){
   singleWorkClass(id:$classID){
