@@ -1,13 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Query } from "react-apollo"
-
+import Header from "../../components/Header/Header"
 import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
 import { graphQLClient } from "../../Services/Api"
 
 import MyClasses from "../../components/MyClasses"
 import QueryGetMyClasses from "../../Graphql/QueryGetMyClasses"
+import ProfileClasses from "../../components/MyProfile/ProfileClasses"
 
 class BlogIndex extends React.Component {
   render() {
@@ -24,7 +25,7 @@ class BlogIndex extends React.Component {
       >
         {({ loading, error, data, ...results }) => {
           if (error || loading) return null
-
+          console.log(data)
           return (
             <Layout location={this.props.location} title={siteTitle}>
               <SEO
@@ -38,7 +39,8 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
-              <MyClasses myClasses={data.me.classes} />
+              <Header userInfo={this.props.myData} />
+              <ProfileClasses />
               <section />
             </Layout>
           )

@@ -1,52 +1,27 @@
 import React, { Component } from "react"
-import Header from "./Header"
-import { Tabs } from "antd"
+import Header from "../Header/Header"
+import { Link } from "gatsby"
+// import { Tabs } from "antd"
+import { Menu } from "antd"
 import style from "./style.module.scss"
-import ProfilePayment from "./ProfilePayment/index"
+import ProfileClasses from "../MyProfile/ProfileClasses"
+// import ProfilePayment from "./ProfilePayment"
+// import ProfileClasses from "./ProfileClasses"
 
-const { TabPane } = Tabs
+// const { TabPane } = Tabs
 
-function callback(key) {
-  console.log(key)
-}
+// function callback(key) {
+//   console.log(key)
+// }
 
 class MyProfile extends Component {
-  constructor() {
-    super()
-
-    this.state = {}
-  }
-
   render() {
     console.log("ProfileData", this.props.myData)
 
     return (
-      <div className={style.boxShadow}>
-        <div className={style.discoverWrapper}>
-          <Header userInfo={this.props.myData} />
-          <Tabs
-            defaultActiveKey="1"
-            onChange={callback}
-            // style={{ justifyContent: "center", margin: "0 auto" }}
-          >
-            <TabPane
-              tab="My Classes"
-              key="1"
-              style={{ backgroundColor: "blue" }}
-            >
-              My Classes
-            </TabPane>
-            <TabPane tab="Favorites" key="2">
-              Favorites
-            </TabPane>
-            <TabPane tab="Payment" key="3">
-              <ProfilePayment />
-            </TabPane>
-            <TabPane tab="Edit Profile" key="4">
-              Settings
-            </TabPane>
-          </Tabs>
-        </div>
+      <div className={style.discoverWrapper}>
+        {/* <Header userInfo={this.props.myData} /> */}
+        <ProfileClasses />
       </div>
     )
   }

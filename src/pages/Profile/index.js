@@ -8,6 +8,7 @@ import { graphQLClient } from "../../Services/Api"
 
 import MyProfile from "../../components/MyProfile"
 import QueryMe from "../../Graphql/QueryMe"
+import Header from "../../components/Header/Header"
 
 class BlogIndex extends React.Component {
   render() {
@@ -38,7 +39,8 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
-              <MyProfile myData={data.me} />
+              <Header userInfo={data.me} />
+              <MyProfile />
               <section />
             </Layout>
           )

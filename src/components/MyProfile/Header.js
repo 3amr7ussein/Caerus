@@ -1,5 +1,6 @@
 import React, { Component } from "react"
-import { Layout, Col, Row, Icon } from "antd"
+import { Layout, Menu } from "antd"
+import { Link } from "gatsby"
 import style from "./style.module.scss"
 import StyledHN from "../styled-hn"
 import BrandedButton from "../brandedButton/BrandedButton"
@@ -11,6 +12,16 @@ import FirebaseImage from "../FirebaseTmage"
 const { Content } = Layout
 
 class Header extends Component {
+  state = {
+    current: "one",
+  }
+
+  handleClick = e => {
+    console.log("click ", e)
+    this.setState({
+      current: e.key,
+    })
+  }
   render() {
     console.log("USER", this.props.userInfo)
     return (
@@ -21,51 +32,19 @@ class Header extends Component {
         <div className={style.infoContainer}>
           <h3>{this.props.userInfo.name}</h3>
           <p>{this.props.userInfo.email}</p>
+          <div />
           <div>
-            <BrandedButton
-              Icon={
-                <Icon
-                  type="edit"
-                  theme="filled"
-                  style={{
-                    color: "white",
-                  }}
-                  className={style.onHover}
-                />
-              }
-              content={"Edit Profile"}
-              className={style.BrandedbuttonStyle}
-              styles={{
-                width: "130px",
-                fontSize: "16px",
-                height: "30px",
-                fontWeight: "500",
-              }}
-            />
-
-            <BrandedButton
-              Icon={
-                <Icon
-                  type="lock"
-                  theme="filled"
-                  style={{
-                    color: "#ff4200",
-                  }}
-                />
-              }
-              content={"Change Password"}
-              className={style.ChangePassStyle}
-              styles={{
-                color: "#ff4200",
-                width: "200px",
-                fontSize: "16px",
-                height: "30px",
-                marginLeft: "10px",
-                backgroundColor: "white",
-                border: "1px solid #ff4200",
-                fontWeight: "500",
-              }}
-            />
+            <Menu
+              onClick={this.handleClick}
+              selectedKeys={[this.state.current]}
+              mode="horizontal"
+            >
+              <Menu.Item key="one">
+                <Link to="/Explore" /> Home
+              </Menu.Item>
+              <Menu.Item key="two">Navigation two</Menu.Item>
+              <Menu.Item key="three">Navigation three</Menu.Item>
+            </Menu>
           </div>
         </div>
       </section>

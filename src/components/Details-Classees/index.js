@@ -12,6 +12,7 @@ const { Content } = Layout
 
 export default class ClassDetails extends Component {
   render() {
+    console.log("ClassDetails", this.props.singleClassDetails)
     return (
       <StaticQuery
         query={ClassDetailsQuery}
