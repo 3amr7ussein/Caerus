@@ -30,13 +30,13 @@ class Header extends Component {
         <div className={style.menuContainer}>
           <Menu mode="horizontal">
             <Menu.Item key="_01">
-              <Link to="myBooking">My Classes</Link>
+              <Link to="Profile">My Classes</Link>
             </Menu.Item>
             <Menu.Item key="_02">
-              <Link to="myFav">Favorites</Link>
+              <Link to="favorites">Favorites</Link>
             </Menu.Item>
             <Menu.Item key="_03">
-              <Link to="mypayments">Payments</Link>
+              <Link to="payments">Payments</Link>
             </Menu.Item>
             <Menu.Item key="_04">
               <Link to="editprofile">Edit Profile</Link>

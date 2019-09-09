@@ -1,10 +1,10 @@
 import React, { Component } from "react"
-import style from "./style.module.scss"
+
 import { Col, Row } from "antd"
-import ClassesMenu from "./ClassesMenu"
+import FavoriteMenu from "./FavoriteMenu"
 import UpcomingClasses from "./Upcoming"
 
-class ProfileClasses extends Component {
+class ProfileFavorites extends Component {
   state = {
     ActiveTab: 1,
   }
@@ -19,7 +19,7 @@ class ProfileClasses extends Component {
     if (this.state.ActiveTab === 1) {
       show = <UpcomingClasses userClasses={this.props.classes} />
     } else if (this.state.ActiveTab === 2) {
-      show = <div>Past</div>
+      show = <div>Studios</div>
     }
 
     return (
@@ -27,7 +27,7 @@ class ProfileClasses extends Component {
         <Row>
           <Col span={4}>
             {" "}
-            <ClassesMenu parentCallback={this.callbackFunction} />
+            <FavoriteMenu parentCallback={this.callbackFunction} />
           </Col>
           <Col span={1} />
           <Col span={19}>{show}</Col>
@@ -37,4 +37,4 @@ class ProfileClasses extends Component {
   }
 }
 
-export default ProfileClasses
+export default ProfileFavorites
