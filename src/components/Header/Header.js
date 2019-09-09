@@ -13,7 +13,7 @@ import { Link } from "gatsby"
 
 class Header extends Component {
   render() {
-    console.log("USER", this.props.userInfo)
+    console.log("Header", this.props.userInfo)
     return (
       <div className={style.dadContainer}>
         <section className={style.sectionStyle}>

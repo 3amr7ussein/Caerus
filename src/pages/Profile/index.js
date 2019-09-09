@@ -25,7 +25,7 @@ class BlogIndex extends React.Component {
       >
         {({ loading, error, data, ...results }) => {
           if (error || loading) return null
-
+            console.log("data", data)
           return (
             <Layout location={this.props.location} title={siteTitle}>
               <SEO
@@ -39,8 +39,9 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
-              <Header userInfo={data.me} />
-              <MyProfile />
+             
+              <Header userInfo = {data.me} />
+              <MyProfile  />
               <section />
             </Layout>
           )

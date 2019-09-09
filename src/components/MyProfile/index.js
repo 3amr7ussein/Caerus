@@ -16,11 +16,11 @@ import ProfileClasses from "../MyProfile/ProfileClasses"
 
 class MyProfile extends Component {
   render() {
-    console.log("ProfileData", this.props.myData)
+    // console.log("Profile", this.props.userInfo)
 
     return (
       <div className={style.discoverWrapper}>
-        {/* <Header userInfo={this.props.myData} /> */}
+        
         <ProfileClasses />
       </div>
     )
