@@ -9,7 +9,7 @@ class UpcomingClasses extends Component {
     console.log("userClasses", this.props.userClasses)
     return (
       <div className={style.myCards}>
-        <h4 style={{ marginBottom: 30 }}>Manage your Upcoming CLasses</h4>
+        <h4 style={{ marginBottom: 30 }}>Manage your Favorite CLasses</h4>
         <div className={style.cards}>
           <List
             grid={{

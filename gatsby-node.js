@@ -30,14 +30,9 @@ exports.createPages = ({ graphql, actions }) => {
     component: path.resolve(`src/pages/Profile/index.js`),
   })
   createPage({
-    path: "/myBooking/*",
-    matchPath: "/myBooking/",
-    component: path.resolve(`src/pages/myBooking/index.js`),
-  })
-  createPage({
-    path: "/myFav/*",
-    matchPath: "/myFav/",
-    component: path.resolve(`src/pages/myFav/index.js`),
+    path: "/favorites/*",
+    matchPath: "/favorites/",
+    component: path.resolve(`src/pages/favorites/index.js`),
   })
   createPage({
     path: "/q&a/*",
@@ -60,16 +55,14 @@ exports.createPages = ({ graphql, actions }) => {
     component: path.resolve(`src/pages/SuccessPayment/index.js`),
   })
   createPage({
-    path: "/mypayments/*",
-    matchPath: "/mypayments/",
-    component: path.resolve(`src/pages/mypayments/index.js`),
-    
+    path: "/payments/*",
+    matchPath: "/payments/",
+    component: path.resolve(`src/pages/payments/index.js`),
   })
   createPage({
     path: "/editprofile/*",
     matchPath: "/editprofile/",
     component: path.resolve(`src/pages/editProfile/index.js`),
-
   })
   return null
 }

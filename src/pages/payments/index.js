@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Query } from "react-apollo"
-import Header from '../../components/Header/Header';
+import Header from "../../components/Header/Header"
 import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
 import { graphQLClient } from "../../Services/Api"
 
-import MyPayments from "../../components/MyPayments"
-import QueryMe from "../../Graphql/QueryMe"
+import ProfilePayment from "../../components/ProfilePayment"
+import QueryUserData from "../../Graphql/QueryUserData"
 
 class BlogIndex extends React.Component {
   render() {
@@ -19,16 +19,16 @@ class BlogIndex extends React.Component {
     return (
       <Query
         client={graphQLClient}
-        query={QueryMe}
+        query={QueryUserData}
         fetchPolicy={"network-only"}
       >
         {({ loading, error, data, ...results }) => {
           if (error || loading) return null
-          console.log(data)
+          console.log("UderData", data)
           return (
             <Layout location={this.props.location} title={siteTitle}>
               <SEO
-                title="My Payments Page"
+                title="MyProfile Page"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
               />
               <div
@@ -38,8 +38,9 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
-              <Header userInfo={this.props.myData} />
-              <MyPayments myClasses={data.me.classes} />
+              <Header userInfo={data.me} />
+              <div style={{ width: "100%", height: 48 }} />
+              <ProfilePayment />
               <section />
             </Layout>
           )
