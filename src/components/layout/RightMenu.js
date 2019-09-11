@@ -58,7 +58,7 @@ class RightMenu extends Component {
                     marginRight: 8,
                   }}
                 />
-                <Link to="/myProfile/">
+                <Link to="/myProfile/" style = {{color:'white'}}>
                   {" "}
                   Hello, {this.props.user.user.name}{" "}
                 </Link>

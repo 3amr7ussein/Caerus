@@ -1,11 +1,6 @@
 import React, { Component } from "react"
 import { Layout, Menu } from "antd"
 import style from "./style.module.scss"
-import StyledHN from "../styled-hn"
-import BrandedButton from "../brandedButton/BrandedButton"
-import ProfilePic from "../../../static/Images/img_avatarWoman.png"
-import EditPin from "../../../static/Images/EditPen1.png"
-import Lock from "../../../static/Images/Lock-icon.png"
 import FirebaseImage from "../FirebaseTmage"
 import { Link } from "gatsby"
 
@@ -13,7 +8,7 @@ import { Link } from "gatsby"
 
 class Header extends Component {
   render() {
-    console.log("USER", this.props.userInfo)
+    console.log("Header", this.props.userInfo)
     return (
       <div className={style.dadContainer}>
         <section className={style.sectionStyle}>

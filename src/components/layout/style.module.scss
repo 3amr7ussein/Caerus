@@ -24,6 +24,7 @@
     margin: 0px auto;
     max-width: $containerWidth;
     justify-content: center;
+  
   }
 }
 .layout {
@@ -150,6 +151,7 @@
   :golbal {
     .ant-menu {
       background-color: $brandOrange;
+    
     }
   }
 }
