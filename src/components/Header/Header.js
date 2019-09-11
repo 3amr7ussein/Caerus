@@ -23,7 +23,7 @@ class Header extends Component {
           </div>
         </section>
         <div className={style.menuContainer}>
-          <Menu mode="horizontal" defaultSelectedKeys = {[this.props.active]}>
+          <Menu mode="horizontal" defaultSelectedKeys={[this.props.active]}>
             <Menu.Item key="_01">
               <Link to="Profile">My Classes</Link>
             </Menu.Item>

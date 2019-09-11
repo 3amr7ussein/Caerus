@@ -75,7 +75,7 @@ export default function* root() {
     yield takeEvery(formLogin.REQUEST, getUserLogin),
     yield takeEvery(formRegister.REQUEST, signupUserSaga),
     // yield takeEvery(formSearch.REQUEST, getSearch),
-    // yield takeEvery(formUpdateProfile.REQUEST, doUpdateUserProfile),
+    yield takeEvery(formUpdateProfile.REQUEST, doUpdateUserProfile),
     // yield takeEvery(formCheckoutClass.REQUEST, doCheckoutClass),
     yield takeEvery(formAddToFavorite.REQUEST, doAddToFavorite),
     yield takeEvery(formRemoveFromFav.REQUEST, doRemoveFromFavorite),
