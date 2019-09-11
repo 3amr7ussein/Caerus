@@ -32,7 +32,7 @@ class ProfileClasses extends Component {
 
     return (
       <div>
-        <Row>
+        <Row className = {style.discoverWrapper}>
           <Col md={4} xs = {24}>
             {" "}
             <ClassesMenu parentCallback={this.callbackFunction} />

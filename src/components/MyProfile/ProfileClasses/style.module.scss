@@ -1,0 +1,9 @@
+.discoverWrapper {
+    margin: 0px auto;
+    max-width: $containerWidth;
+  }
+  @media (max-width: $containerWidth) {
+    .discoverWrapper {
+      padding: 0px 30px;
+    }
+  }
