@@ -9,15 +9,7 @@
   box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.15);
 }
 
-.discoverWrapper {
-  margin: 0px auto;
-  max-width: $containerWidth;
-}
-@media (max-width: $containerWidth) {
-  .discoverWrapper {
-    padding: 0px 30px;
-  }
-}
+
 .boxShadow {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
 }
@@ -32,6 +24,13 @@
   align-items: center;
   margin-top: 50px;
   // background-color: #5ccdb0
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
 }
 .imgContainer img {
   max-height: 100%;

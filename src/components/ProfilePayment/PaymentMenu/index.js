@@ -2,7 +2,12 @@ import React, { Component } from "react"
 import style from "./style.module.scss"
 import { Collapse, Col, Row } from "antd"
 import { Link } from "gatsby"
-
+import InactiveMyCards from '../../../../static/Images/ic_myCard.png'
+import activeMyCards from '../../../../static/Images/ic_myCardActive.png';
+import InactivePromo from '../../../../static/Images/ic_promoCodes.png';
+import activePromo from '../../../../static/Images/ic_promoCodesActive.png';
+import InactiveWallet from '../../../../static/Images/ic_wallet.png';
+import activeWallet from '../../../../static/Images/ic_walletActive.png';
 class PaymentMenu extends Component {
   state = {
     active: 1,
@@ -37,7 +42,7 @@ class PaymentMenu extends Component {
               this.handleClick(1)
             }}
           >
-            <i /> My Cards
+            <img src = {this.state.active===1 ?activeMyCards : InactiveMyCards }  /> My Cards
           </li>
 
           <li
@@ -48,7 +53,7 @@ class PaymentMenu extends Component {
               this.handleClick(2)
             }}
           >
-            <i /> Wallet{" "}
+            <img src = {this.state.active===2 ?activeWallet : InactiveWallet }  /> Wallet{" "}
           </li>
 
           <li
@@ -59,7 +64,7 @@ class PaymentMenu extends Component {
               this.handleClick(3)
             }}
           >
-            <i /> Promo Codes{" "}
+            <img src = {this.state.active===3 ?activePromo : InactivePromo}  /> Promo Codes{" "}
           </li>
         </ul>
       </div>
