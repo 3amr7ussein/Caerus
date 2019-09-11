@@ -1,16 +1,16 @@
-import React , { Component } from 'react';
-import ClassCard from "../ClassCard"
+import React from "react"
+import ProfileEdit from "./ProfileEdit"
+import style from "./style.module.scss"
 
-class EditProfile extends Component {
+class EditProfile extends React.Component {
   render() {
     // console.log("MyFavorite", this.props.myFav)
     return (
-      <div>
-        <h1>MY Edit Profile Page</h1>
-        <ClassCard myClasses={this.props.myFav} />
+      <div className={style.discoverWrapper}>
+        <ProfileEdit userInfo={this.props.userInfo} />
       </div>
     )
   }
 }
 
-export default EditProfile;
+export default EditProfile

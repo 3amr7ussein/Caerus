@@ -34,7 +34,7 @@ class Header extends Component {
               <Link to="payments">Payments</Link>
             </Menu.Item>
             <Menu.Item key="_04">
-              <Link to="editprofile">Edit Profile</Link>
+              <Link to="editProfile">Edit Profile</Link>
             </Menu.Item>
           </Menu>
         </div>
