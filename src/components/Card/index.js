@@ -34,7 +34,7 @@ export default class CardData extends Component {
               <Card
                 style={{ padding: 0 }}
                 className={style.cardMeta}
-                cover={<FirebaseImage fbref={cover} />}
+                cover={<FirebaseImage fbref={cover} style = {{height : 200 , marginBottom:0}} />}
               >
                 <div>
                   <div className={style.cardTitle}>

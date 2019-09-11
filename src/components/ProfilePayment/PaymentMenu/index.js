@@ -34,6 +34,8 @@ class PaymentMenu extends Component {
         <ul className={style.payList}>
           {/* when user click on list item it change the # of active list item inside state */}
           {/* styling is according to the active list item from state.active */}
+          <Row>
+            <Col lg={24} xs={8}>
           <li
             style={
               this.state.active === 1 ? activeItemStyle : inActiveItemStyle
@@ -44,7 +46,8 @@ class PaymentMenu extends Component {
           >
             <img src = {this.state.active===1 ?activeMyCards : InactiveMyCards }  /> My Cards
           </li>
-
+          </Col>
+          <Col lg={24} xs={8}>
           <li
             style={
               this.state.active === 2 ? activeItemStyle : inActiveItemStyle
@@ -55,7 +58,8 @@ class PaymentMenu extends Component {
           >
             <img src = {this.state.active===2 ?activeWallet : InactiveWallet }  /> Wallet{" "}
           </li>
-
+          </Col>
+          <Col lg={24} xs={8}>
           <li
             style={
               this.state.active === 3 ? activeItemStyle : inActiveItemStyle
@@ -66,6 +70,8 @@ class PaymentMenu extends Component {
           >
             <img src = {this.state.active===3 ?activePromo : InactivePromo}  /> Promo Codes{" "}
           </li>
+          </Col>
+          </Row>
         </ul>
       </div>
     )

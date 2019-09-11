@@ -4,7 +4,7 @@ import ic_upcomingClassesActive from "../../../../../static/Images/ic_upcomingCl
 import ic_upcomingClasses from "../../../../../static/Images/ic_upcomingClasses.png"
 import ic_pastClassesActive from "../../../../../static/Images/ic_pastClassesActive.png"
 import ic_pastClasses from "../../../../../static/Images/ic_pastClasses.png"
-
+import {Row , Col} from 'antd';
 class PaymentMenu extends Component {
   state = {
     active: 1,
@@ -31,7 +31,10 @@ class PaymentMenu extends Component {
         <ul className={style.payList}>
           {/* when user click on list item it change the # of active list item inside state */}
           {/* styling is according to the active list item from state.active */}
-          <li
+         <Row>
+         <Col lg={24} xs={12}>
+   
+                  <li
             style={
               this.state.active === 1 ? activeItemStyle : inActiveItemStyle
             }
@@ -48,6 +51,9 @@ class PaymentMenu extends Component {
             </div>
             Upcoming
           </li>
+          </Col>
+
+          <Col lg={24} xs={12}>
 
           <li
             style={
@@ -67,6 +73,8 @@ class PaymentMenu extends Component {
             </div>
             Past
           </li>
+          </Col>
+          </Row>
         </ul>
       </div>
     )

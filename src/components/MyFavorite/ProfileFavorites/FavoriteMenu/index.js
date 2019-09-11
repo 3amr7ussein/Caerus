@@ -8,29 +8,34 @@ import ic_stud from "../../../../../static/Images/ic_stud.png"
 class FavoriteMenu extends Component {
   state = {
     active: 1,
+    wid : 100
   }
 
   handleClick = activeTab => {
     this.setState({ active: activeTab })
     this.props.parentCallback(activeTab)
   }
-
+ 
   render() {
+    this.state.wid = window.innerWidth
     var inActiveItemStyle = {
       color: "#ccc",
       fontWeight: "bold",
     }
-
+    
     var activeItemStyle = {
       color: "black",
       fontWeight: "bold",
     }
 
+    console.log('Window' , this.state.wid)
     return (
+      
       <div>
         <ul className={style.payList}>
           {/* when user click on list item it change the # of active list item inside state */}
           {/* styling is according to the active list item from state.active */}
+            
           <li
             style={
               this.state.active === 1 ? activeItemStyle : inActiveItemStyle
@@ -46,9 +51,11 @@ class FavoriteMenu extends Component {
                 <img src={ic_classes} />
               )}
             </div>
-            Classes
+            {console.log("BEFORE", this.state.wid)}
+          {this.state.wid > 980 ? <>Classes</> : <></>}
           </li>
-
+          
+          
           <li
             style={
               this.state.active === 2 ? activeItemStyle : inActiveItemStyle
@@ -65,8 +72,9 @@ class FavoriteMenu extends Component {
                 <img src={ic_studActive} />
               )}
             </div>
-            Studios
+         {this.state.wid > 980 ? <>Studios</>:<></>}
           </li>
+        
         </ul>
       </div>
     )

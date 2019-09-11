@@ -30,12 +30,12 @@ class ProfilePayment extends Component {
     return (
       <div className = {style.discoverWrapper}>
         <Row>
-          <Col span={4}>
+          <Col lg={4} xs={24}>
             {" "}
             <PaymentMenu parentCallback={this.callbackFunction} />
           </Col>
-          <Col span={1} />
-          <Col span={19}>
+          <Col lg={1} xs={0} />
+          <Col lg={19} xs = {24}>
             {/* {this.state.ActiveNum ? <MyCards /> : <div>Hello</div>}  */}
             {/* <MyCards /> */}
             {show}

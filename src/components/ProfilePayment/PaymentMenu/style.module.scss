@@ -4,4 +4,7 @@
 
 .payList li{
     padding : 10px;
-}
+    white-space: nowrap;
+    @media (max-width: $containerWidth) {
+    text-align: center;
+}}
