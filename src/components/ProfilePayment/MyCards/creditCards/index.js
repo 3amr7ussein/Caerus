@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import style from "./style.module.scss"
 import { Collapse, Col, Row } from "antd"
+import img_master from "../../../../../static/Images/img_master.png"
 
 const digits = "1234"
 const expire = "12/23"

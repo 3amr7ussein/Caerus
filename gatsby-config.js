@@ -86,7 +86,6 @@ module.exports = {
         icon: `content/assets/brand_caerus_white.png`,
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-sass",

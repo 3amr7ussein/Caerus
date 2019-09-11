@@ -9,6 +9,10 @@ import { createLogger } from "redux-logger"
 import { formActionSaga } from "redux-form-saga"
 import rootSaga from "../Sagas"
 import { graphQLClient } from "../Services/Api"
+import { persistStore, persistReducer } from "redux-persist"
+import storage from "redux-persist/lib/storage" // defaults to localStorage for web
+import { PersistGate } from "redux-persist/integration/react"
+import ImmutablePersistenceTransform from "../Services/ImmutablePersistenceTransform"
 
 const isDebuggingInChrome = true
 const logger = createLogger({
@@ -27,18 +31,45 @@ middleware.push(sagaMiddleware)
 middleware.push(logger)
 
 enhancers.push(applyMiddleware(...middleware))
+let rootReducer = combineReducers({ ...reducers })
 
-export const store = createStore(
-  combineReducers({ ...reducers }),
-  {},
-  compose(...enhancers)
-)
+let store, persistor
+
+if (typeof window !== `undefined` && window) {
+  const persistConfig = {
+    key: "root",
+    blacklist: [
+      // "nav",
+      "userRegister",
+      "form",
+      "facebookLogin",
+      "workClassDetails",
+      // "search",
+      // "github",
+    ],
+    storage,
+    transforms: [ImmutablePersistenceTransform],
+  }
+  const persistedReducer = persistReducer(persistConfig, rootReducer)
+  store = createStore(persistedReducer, {}, compose(...enhancers))
+  persistor = persistStore(store)
+} else {
+  store = createStore(rootReducer, {}, compose(...enhancers))
+}
 
 sagaMiddleware.run(rootSaga)
 sagaMiddleware.run(formActionSaga)
 
 export default ({ element }) => (
   <ApolloProvider client={graphQLClient}>
-    <Provider store={store}>{element}</Provider>
+    <Provider store={store}>
+      {!!(typeof window !== `undefined` && window) ? (
+        <PersistGate loading={null} persistor={persistor}>
+          {element}
+        </PersistGate>
+      ) : (
+        { element }
+      )}
+    </Provider>
   </ApolloProvider>
 )
