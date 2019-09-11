@@ -1,4 +1,21 @@
 .myCards {
   padding: 10px;
   border: 1px solid #ddd;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  width:90%;
+  margin: 0 auto;
+}
+.Cards {
+  
+  margin:auto;
+  width:100%;
+}
+.cards{
+  margin: 0px auto;
+    max-width: $containerWidth;
+  
+  // @media (max-width: $containerWidth) {
+  //     padding: 0px 30px;
+    
+  // }
 }

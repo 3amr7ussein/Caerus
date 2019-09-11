@@ -6,9 +6,8 @@ import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
 import { graphQLClient } from "../../Services/Api"
 
-import MyClasses from "../../components/MyClasses"
-import QueryGetMyClasses from "../../Graphql/QueryGetMyClasses"
-import ProfileClasses from "../../components/MyProfile/ProfileClasses"
+import ProfilePayment from "../../components/ProfilePayment"
+import QueryUserData from "../../Graphql/QueryUserData"
 
 class BlogIndex extends React.Component {
   render() {
@@ -20,16 +19,16 @@ class BlogIndex extends React.Component {
     return (
       <Query
         client={graphQLClient}
-        query={QueryGetMyClasses}
+        query={QueryUserData}
         fetchPolicy={"network-only"}
       >
         {({ loading, error, data, ...results }) => {
           if (error || loading) return null
-          console.log(data)
+          console.log("UderData", data)
           return (
             <Layout location={this.props.location} title={siteTitle}>
               <SEO
-                title="MyBookingClasses Page"
+                title="MyProfile Page"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
               />
               <div
@@ -39,8 +38,9 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
-              <Header/>
-              <ProfileClasses />
+              <Header userInfo={data.me} />
+              <div style={{ width: "100%", height: 48 }} />
+              <ProfilePayment />
               <section />
             </Layout>
           )

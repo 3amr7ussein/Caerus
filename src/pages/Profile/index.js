@@ -7,8 +7,8 @@ import SEO from "../../components/seo/index"
 import { graphQLClient } from "../../Services/Api"
 
 import MyProfile from "../../components/MyProfile"
-import QueryMe from "../../Graphql/QueryMe"
 import Header from "../../components/Header/Header"
+import QueryUserData from "../../Graphql/QueryUserData"
 
 class BlogIndex extends React.Component {
   render() {
@@ -20,12 +20,12 @@ class BlogIndex extends React.Component {
     return (
       <Query
         client={graphQLClient}
-        query={QueryMe}
+        query={QueryUserData}
         fetchPolicy={"network-only"}
       >
         {({ loading, error, data, ...results }) => {
           if (error || loading) return null
-            console.log("data", data)
+          console.log("UderData", data)
           return (
             <Layout location={this.props.location} title={siteTitle}>
               <SEO
@@ -39,9 +39,9 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
-             
-              <Header userInfo = {data.me} />
-              <MyProfile  />
+              <Header userInfo={data.me} />
+              <div style={{ width: "100%", height: 48 }} />
+              <MyProfile classes={data.me.classes} />
               <section />
             </Layout>
           )

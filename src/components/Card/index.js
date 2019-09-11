@@ -32,7 +32,7 @@ export default class CardData extends Component {
           return (
             <div>
               <Card
-                style={{ width: 300, padding: 0 }}
+                style={{ padding: 0 }}
                 className={style.cardMeta}
                 cover={<FirebaseImage fbref={cover} />}
               >

@@ -1,0 +1,70 @@
+.discoverWrapper {
+  margin: 0px auto;
+  max-width: $containerWidth;
+}
+@media (max-width: $containerWidth) {
+  .discoverWrapper {
+    padding: 0px 30px;
+  }
+}
+.boxShadow {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+}
+.sectionStyle {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+}
+.imgContainer img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+.imgContainer {
+  margin-right: 20px;
+  margin-top: 20px;
+  max-height: 150px;
+  max-width: 150px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.ChangePassStyle {
+  color: #ff4200;
+}
+
+p {
+  color: #6c757d;
+  margin-bottom: 50px;
+}
+
+// Watch out this is just Global not involved in a class or some to prevent this hover action from all the buttons
+// but don't warry no buttons contains icons know except these two So ... I couldn't find solution for it till know.
+
+:global {
+  .ant-btn:hover .anticon {
+    color: #ff4200 !important;
+  }
+
+  .ant-tabs-nav-wrap {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+// $colorWhite: #fff;
+// $brandGreen: #5ccdb0;
+// $brandCoral: #fe6b52;
+// $brandGrey: #9b9b9b;
+// $brandDarkGrey: #4a4a4a;
+// $brandOrange: #ff4200;
+// $brandDarkBlue: #0c141f;

@@ -7,19 +7,18 @@ import Login from "../Modal/Login"
 import Register from "../Modal/Register"
 import FirebaseImage from "../FirebaseTmage/index.js"
 
-const menu =  <Menu>
-    <Menu.Item key="0">
-      <Link to="/myProfile/">My Profile</Link>
-    </Menu.Item>
-    <Menu.Item key="1">
-      <Link to="/myBooking">My Booking</Link>
-    </Menu.Item>
+// const menu =  <Menu>
+//     <Menu.Item key="0">
+//       <Link to="/myProfile/">My Profile</Link>
+//     </Menu.Item>
+//     <Menu.Item key="1">
+//       <Link to="/myBooking">My Booking</Link>
+//     </Menu.Item>
 
-    <Menu.Item key="3">
-      <Link to="/myFav">My Favorite</Link>
-    </Menu.Item>
-  </Menu>
-
+//     <Menu.Item key="3">
+//       <Link to="/myFav">My Favorite</Link>
+//     </Menu.Item>
+//   </Menu>
 
 class RightMenu extends Component {
   state = {
@@ -59,7 +58,11 @@ class RightMenu extends Component {
                     marginRight: 8,
                   }}
                 />
-                <Dropdown
+                <Link to="/myProfile/" style = {{color:'white'}}>
+                  {" "}
+                  Hello, {this.props.user.user.name}{" "}
+                </Link>
+                {/* <Dropdown
                   overlay={menu}
                   trigger={["click"]}
                   className={"dropDown"}
@@ -71,7 +74,7 @@ class RightMenu extends Component {
                   >
                     Hello, {this.props.user.user.name} <Icon type="down" />
                   </a>
-                </Dropdown>
+                </Dropdown> */}
               </div>
             ) : (
               <Button
