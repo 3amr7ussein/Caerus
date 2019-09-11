@@ -9,7 +9,8 @@
 .cardTitle {
   font-size: 24px;
   color: black;
-
+  overflow: hidden;
+  word-wrap: none;
   a:hover {
     color: $brandOrange;
   }

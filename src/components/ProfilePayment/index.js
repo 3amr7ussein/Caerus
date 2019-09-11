@@ -28,7 +28,7 @@ class ProfilePayment extends Component {
       show = <PromoCodes />
     }
     return (
-      <div>
+      <div className = {style.discoverWrapper}>
         <Row>
           <Col span={4}>
             {" "}
