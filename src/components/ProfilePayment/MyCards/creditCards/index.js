@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import style from "./style.module.scss";
 import { Collapse , Col ,Row} from 'antd';
-import {Link} from 'gatsby';
-import autoMergeLevel1 from "redux-persist/es/stateReconciler/autoMergeLevel1";
+
 const digits = '1234'
 const expire = "12/23"
 class CreditCard extends Component {
