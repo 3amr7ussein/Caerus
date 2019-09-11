@@ -1,28 +1,26 @@
 import React, { Component } from "react"
 import style from "./style.module.scss"
 import { Link } from "gatsby"
-import { List ,Row,Col} from "antd"
+import { List ,Row,Col, Divider} from "antd"
 import CardData from "../../../Card"
 
 class UpcomingClasses extends Component {
-  
   render() {
+    console.log('propssss',this.props.userClasses)
  let show;
-  if( this.props.userClasses == []) 
-  {
-  show = <div className = "noClasses">
+  ( this.props.userClasses.length === 0) ?
+  
+  show = (<div className ={style.noClasses}>
   <h4>There is No Booking Classes</h4>
   <Link to="/Explore">
 
   SEARCH FOR CLASSES
   </Link>
-
-  
   </div>
-  }
-  else
-   {
-    console.log("SHOOWWWWWWW"); 
+  
+  )
+  :
+   (
     show = <List
     grid={{
       gutter: 16,
@@ -60,12 +58,15 @@ class UpcomingClasses extends Component {
       // </Row>
        )
        }
-  />}
+  />)
+
+
     return (
       <div className={style.myCards}>
         <h4 style={{ marginBottom: 30 }}>Manage Your Upcoming Classes</h4>
+        <Divider />
         <div className={style.cards}>
-       {show}
+             {show}
         </div>
       </div>
     )

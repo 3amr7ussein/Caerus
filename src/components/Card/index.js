@@ -37,9 +37,11 @@ export default class CardData extends Component {
                 cover={<FirebaseImage fbref={cover} />}
               >
                 <div>
-                  <Link className={style.cardTitle} to="/">
+                  <div className={style.cardTitle}>
+                  <Link to="/">
                     {title}
                   </Link>
+                  </div>
                   <div className={style.cardRate}>
                     <Rate disabled defaultValue={this.props.rate ? rate : 5} />
                     <span>(119 review)</span>
