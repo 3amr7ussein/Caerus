@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import style from "./style.module.scss"
-import ic_classesActive from "../../../../../static/Images/ic_classesActive.png"
-import ic_classes from "../../../../../static/Images/ic_classes.png"
-import ic_studActive from "../../../../../static/Images/ic_studActive.png"
-import ic_stud from "../../../../../static/Images/ic_stud.png"
+import ic_passwordActive from "../../../../../static/Images/ic_passwordActive.png"
+import ic_password from "../../../../../static/Images/ic_password.png"
+import ic_generalActive from "../../../../../static/Images/ic_generalActive.png"
+import ic_general from "../../../../../static/Images/ic_general.png"
 
 class FavoriteMenu extends Component {
   state = {
@@ -41,12 +41,12 @@ class FavoriteMenu extends Component {
           >
             <div style={{ marginRight: 12, display: "inline" }}>
               {this.state.active === 1 ? (
-                <img src={ic_classesActive} />
+                <img src={ic_generalActive} />
               ) : (
-                <img src={ic_classes} />
+                <img src={ic_general} />
               )}
             </div>
-            Classes
+            General
           </li>
 
           <li
@@ -60,12 +60,12 @@ class FavoriteMenu extends Component {
             <div style={{ marginRight: 12, display: "inline" }}>
               {" "}
               {this.state.active === 1 ? (
-                <img src={ic_stud} />
+                <img src={ic_password} />
               ) : (
-                <img src={ic_studActive} />
+                <img src={ic_passwordActive} />
               )}
             </div>
-            Studios
+            ChangePassword
           </li>
         </ul>
       </div>

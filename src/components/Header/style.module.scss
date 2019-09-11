@@ -1,4 +1,4 @@
-.dadContainer{
+.dadContainer {
   // background-color: tomato;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
 .boxShadow {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
 }
-.menuContainer{
+.menuContainer {
   width: 60%;
 }
 .sectionStyle {
@@ -32,7 +32,6 @@
   align-items: center;
   margin-top: 50px;
   // background-color: #5ccdb0
-
 }
 .imgContainer img {
   max-height: 100%;
@@ -64,7 +63,6 @@ h3 {
 
 p {
   color: #6c757d;
-  margin-bottom: 50px;
 }
 
 // Watch out this is just Global not involved in a class or some to prevent this hover action from all the buttons

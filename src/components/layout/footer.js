@@ -123,12 +123,12 @@ export default class Footer extends Component {
                     >
                       <FaInstagram />
                     </a>
-                    <a
+                    {/* <a
                       rel="noopener noreferrer"
                       className={style.socialLink}
                       target="_blank"
                       href="https://twitter.com/TheFrondApp"
-                    />
+                    /> */}
                   </div>
                 </Col>
               </Row>

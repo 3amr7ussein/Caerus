@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Query } from "react-apollo"
-import Header from '../../components/Header/Header';
+import Header from "../../components/Header/Header"
 import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
 import { graphQLClient } from "../../Services/Api"
@@ -37,8 +37,9 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
-              <Header userInfo={this.props.myData} />
-              <EditProfile myClasses={data.me.classes} />
+              <Header userInfo={data.me} />
+              <div style={{ width: "100%", height: 48 }} />
+              <EditProfile userInfo={data.me} />
               <section />
             </Layout>
           )
