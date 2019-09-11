@@ -38,9 +38,7 @@ export default class CardData extends Component {
               >
                 <div>
                   <div className={style.cardTitle}>
-                  <Link to="/">
-                    {title}
-                  </Link>
+                    <h4 to="/">{title}</h4>
                   </div>
                   <div className={style.cardRate}>
                     <Rate disabled defaultValue={this.props.rate ? rate : 5} />

@@ -39,7 +39,7 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
-              <Header userInfo={data.me} />
+              <Header userInfo={data.me} active="_01" />
               <div style={{ width: "100%", height: 48 }} />
               <MyProfile classes={data.me.classes} />
               <section />
