@@ -10,12 +10,12 @@ class FavoriteMenu extends Component {
     active: 1,
     wid : 100
   }
-
+  criticalWidth = 980;
   handleClick = activeTab => {
     this.setState({ active: activeTab })
     this.props.parentCallback(activeTab)
   }
- 
+  
   render() {
     this.state.wid = window.innerWidth
     var inActiveItemStyle = {
@@ -52,7 +52,7 @@ class FavoriteMenu extends Component {
               )}
             </div>
             {console.log("BEFORE", this.state.wid)}
-          {this.state.wid > 980 ? <>Classes</> : <></>}
+          {this.state.wid > this.criticalWidth ? <>Classes</> : <></>}
           </li>
           
           
@@ -72,7 +72,7 @@ class FavoriteMenu extends Component {
                 <img src={ic_studActive} />
               )}
             </div>
-         {this.state.wid > 980 ? <>Studios</>:<></>}
+         {this.state.wid > this.criticalWidth ? <>Studios</>:<></>}
           </li>
         
         </ul>

@@ -38,7 +38,7 @@ class BlogIndex extends React.Component {
                   backgroundColor: "#ff4200",
                 }}
               />
-              <Header userInfo={data.me} active = "_02" />
+              <Header userInfo={data.me} active="_02" />
               <div style={{ width: "100%", height: 48 }} />
               <MyFavorite myFav={data.me.favClasses} />
               <section />

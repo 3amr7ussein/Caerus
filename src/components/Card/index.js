@@ -34,13 +34,16 @@ export default class CardData extends Component {
               <Card
                 style={{ padding: 0 }}
                 className={style.cardMeta}
-                cover={<FirebaseImage fbref={cover} style = {{height : 200 , marginBottom:0}} />}
+                cover={
+                  <FirebaseImage
+                    fbref={cover}
+                    style={{ height: 200, marginBottom: 0 }}
+                  />
+                }
               >
                 <div>
                   <div className={style.cardTitle}>
-                  <Link to="/">
-                    {title}
-                  </Link>
+                    <h4 to="/">{title}</h4>
                   </div>
                   <div className={style.cardRate}>
                     <Rate disabled defaultValue={this.props.rate ? rate : 5} />

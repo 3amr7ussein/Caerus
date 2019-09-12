@@ -11,14 +11,17 @@ import activeWallet from '../../../../static/Images/ic_walletActive.png';
 class PaymentMenu extends Component {
   state = {
     active: 1,
+    wid : 100
   }
-
+  criticalWidth = 980;
+  
   handleClick = activeTab => {
     this.setState({ active: activeTab })
     this.props.parentCallback(activeTab)
   }
 
   render() {
+    this.state.wid =window.innerWidth
     var inActiveItemStyle = {
       color: "#ccc",
       fontWeight: "bold",
@@ -34,8 +37,6 @@ class PaymentMenu extends Component {
         <ul className={style.payList}>
           {/* when user click on list item it change the # of active list item inside state */}
           {/* styling is according to the active list item from state.active */}
-          <Row>
-            <Col lg={24} xs={8}>
           <li
             style={
               this.state.active === 1 ? activeItemStyle : inActiveItemStyle
@@ -44,10 +45,9 @@ class PaymentMenu extends Component {
               this.handleClick(1)
             }}
           >
-            <img src = {this.state.active===1 ?activeMyCards : InactiveMyCards }  /> My Cards
+            <img src = {this.state.active===1 ?activeMyCards : InactiveMyCards }  />
+            {this.state.wid >this.criticalWidth ? <>My Cards</>:<></>}
           </li>
-          </Col>
-          <Col lg={24} xs={8}>
           <li
             style={
               this.state.active === 2 ? activeItemStyle : inActiveItemStyle
@@ -56,10 +56,10 @@ class PaymentMenu extends Component {
               this.handleClick(2)
             }}
           >
-            <img src = {this.state.active===2 ?activeWallet : InactiveWallet }  /> Wallet{" "}
+            <img src = {this.state.active===2 ?activeWallet : InactiveWallet }  />
+            {this.state.wid >this.criticalWidth ? <>Wallet</>:<></>}
+            
           </li>
-          </Col>
-          <Col lg={24} xs={8}>
           <li
             style={
               this.state.active === 3 ? activeItemStyle : inActiveItemStyle
@@ -68,10 +68,11 @@ class PaymentMenu extends Component {
               this.handleClick(3)
             }}
           >
-            <img src = {this.state.active===3 ?activePromo : InactivePromo}  /> Promo Codes{" "}
+            <img src = {this.state.active===3 ?activePromo : InactivePromo}  />
+            {this.state.wid >this.criticalWidth ? <>Promo Codes</>:<></>}
+             
           </li>
-          </Col>
-          </Row>
+          
         </ul>
       </div>
     )

@@ -19,11 +19,11 @@ class Header extends Component {
             <h3>{this.props.userInfo.name}</h3>
             <p>{this.props.userInfo.email}</p>
 
-            <div />
+            <div/>
           </div>
         </section>
         <div className={style.menuContainer}>
-          <Menu mode="horizontal" defaultSelectedKeys = {[this.props.active]}>
+          <Menu mode="horizontal" defaultSelectedKeys={[this.props.active]}>
             <Menu.Item key="_01">
               <Link to="Profile">My Classes</Link>
             </Menu.Item>

@@ -5,17 +5,21 @@ import ic_upcomingClasses from "../../../../../static/Images/ic_upcomingClasses.
 import ic_pastClassesActive from "../../../../../static/Images/ic_pastClassesActive.png"
 import ic_pastClasses from "../../../../../static/Images/ic_pastClasses.png"
 import {Row , Col} from 'antd';
+const criticalWid = 980;
 class PaymentMenu extends Component {
   state = {
     active: 1,
+    cirtical:700
   }
 
   handleClick = activeTab => {
     this.setState({ active: activeTab })
     this.props.parentCallback(activeTab)
   }
-
+   
+  
   render() {
+    this.state.cirtical = window.innerWidth;
     var inActiveItemStyle = {
       color: "#ccc",
       fontWeight: "bold",
@@ -25,14 +29,14 @@ class PaymentMenu extends Component {
       color: "black",
       fontWeight: "bold",
     }
-
+    console.log('CRITICAL' , this.state.cirtical);
     return (
       <div>
         <ul className={style.payList}>
           {/* when user click on list item it change the # of active list item inside state */}
           {/* styling is according to the active list item from state.active */}
          <Row>
-         <Col lg={24} xs={12}>
+         <Col span = {24}>
    
                   <li
             style={
@@ -49,11 +53,13 @@ class PaymentMenu extends Component {
                 <img src={ic_upcomingClasses} />
               )}
             </div>
-            Upcoming
+            {this.state.cirtical >criticalWid ? <>Upcoming</>:<></>}
+
+            
           </li>
           </Col>
 
-          <Col lg={24} xs={12}>
+          <Col span = {24}>
 
           <li
             style={
@@ -71,7 +77,8 @@ class PaymentMenu extends Component {
                 <img src={ic_pastClassesActive} />
               )}
             </div>
-            Past
+            {this.state.cirtical >criticalWid ? <>Past</>:<></>}
+
           </li>
           </Col>
           </Row>

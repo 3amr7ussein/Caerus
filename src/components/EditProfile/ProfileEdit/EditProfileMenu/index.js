@@ -49,7 +49,7 @@ class FavoriteMenu extends Component {
             General
           </li>
 
-          <li
+          {/* <li
             style={
               this.state.active === 2 ? activeItemStyle : inActiveItemStyle
             }
@@ -57,7 +57,7 @@ class FavoriteMenu extends Component {
               this.handleClick(2)
             }}
           >
-            <div style={{ marginRight: 12, display: "inline" }}>
+            <div style={{ marginRight: 12 , display : 'inline' }} >
               {" "}
               {this.state.active === 1 ? (
                 <img src={ic_password} />
@@ -65,8 +65,10 @@ class FavoriteMenu extends Component {
                 <img src={ic_passwordActive} />
               )}
             </div>
-            ChangePassword
-          </li>
+            <div style={{display:'inline' , whiteSpace : 'nowrap'}}>
+            Change Password
+            </div>
+          </li> */}
         </ul>
       </div>
     )

@@ -1,10 +1,40 @@
+
 .myCards {
   padding: 10px;
   border: 1px solid #ddd;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
 }
-.inputN {
-  // margin-bottom: 15px;
-  display: flex;
+.myCards h2{
+  font-size: 20px;
+}
+.container{
+  padding : 0 40px;
+}
+
+.input{
+  margin : 5px 0; 
   width: 100%;
+}
+.input p{
+  margin : 2px;
+}
+
+.pP{
+  // justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color : $brandOrange
+}
+
+.pP img {
+  width: 50%;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+  margin-bottom: 0;
+}
+
+.pP h2{
+  color:$brandOrange;
 }
