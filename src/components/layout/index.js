@@ -12,6 +12,12 @@ import SiteFooter from "./footer"
 import Navbar from "./Navbar.js"
 
 class Layout extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      isScrolled: false,
+    }
+  }
   componentDidMount() {
     const app = import("firebase/app")
     const auth = import("firebase/auth")
@@ -21,25 +27,34 @@ class Layout extends React.Component {
       const firebase = getFirebase(values[0])
       firebase.auth().signInAnonymously()
     })
+    window.addEventListener("scroll", () => {
+      const isTop = window.scrollY < 64
+      if (isTop !== true) {
+        this.setState({ isScrolled: true })
+      } else {
+        this.setState({ isScrolled: false })
+      }
+    })
   }
 
   render() {
-    const { children } = this.props
-
+    const { children } = this.props;
+    
     return (
       <div
         className={style.layout}
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
+          
         }}
       >
         <FontContainer />
-        <StyledWrapper>
-          <Menu>
-            {/* <div className={style.discoverWrapper}> */}
+        <StyledWrapper className={this.state.isScrolled ? style.scrolled : style.nav}>
+          <Menu  className={style.menuBar} >
+            <div  className = {style.discoverWrapper}   > */}
             <Navbar />
-            {/* </div> */}
+            </div>
           </Menu>
         </StyledWrapper>
         <main>{children}</main>

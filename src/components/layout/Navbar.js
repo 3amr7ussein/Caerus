@@ -2,44 +2,51 @@ import React, { Component } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import LeftMenu from "./LeftMenu"
 import RightMenu from "./RightMenu"
-import { Drawer, Button } from "antd"
+import { Drawer, Button, Divider } from "antd"
 import style from "./style.module.scss"
+import Link from 'gatsby'
 
 class Navbar extends Component {
   constructor() {
     super()
     this.state = {
-      isScrolled: false,
+      // isScrolled: false,
       current: "mail",
       visible: false,
     }
   }
-  componentDidMount() {
-    window.addEventListener("scroll", () => {
-      const isTop = window.scrollY < 64
-      if (isTop !== true) {
-        this.setState({ isScrolled: true })
-      } else {
-        this.setState({ isScrolled: false })
-      }
-    })
-  }
+ 
   showDrawer = () => {
     this.setState({ visible: !this.state.visible })
   }
 
   onClose = () => {
-    this.setState({ visible: !this.state.visible })
+    this.setState({ visible: false })
   }
 
+
   render() {
+   let   menuBTN 
+   if (this.state.visible ===false ) {
+     menuBTN =   <Button
+   className={style.barsMenu}
+   type="primary"
+   onClick={this.showDrawer}
+ >
+   <span className={style.barsBtn} />
+   </Button>
+   }
+   else
+   {
+     menuBTN=<></>
+    }
     return (
       <StaticQuery
         query={LayoutStaticQuery}
         render={data => {
           return (
-            <div className={this.state.isScrolled ? style.nav : style.scrolled}>
-              <nav className={style.menuBar}>
+            <div >
+              <nav   >
                 <div className={style.logo}>
                   <img
                     alt="/"
@@ -47,29 +54,28 @@ class Navbar extends Component {
                     src={data.brand_logo_white.childImageSharp.fixed.src}
                   />
                 </div>
-                <div className={style.menuCon}>
+                <div className={style.menuCon} >
                   <div className={style.leftMenu}>
-                    <LeftMenu />
+                    <LeftMenu mode="horizontal" />
                   </div>
                   <div className={style.rightMenu}>
-                    <RightMenu />
+                    <RightMenu drawer = '0' mode="horizontal" />
                   </div>
-                  <Button
-                    className={style.barsMenu}
-                    type="primary"
-                    onClick={this.showDrawer}
-                  >
-                    <span className={style.barsBtn} />
-                  </Button>
+                  <>{menuBTN}</>
                   <Drawer
-                    title="Basic Drawer"
+                    
                     placement="right"
-                    closable={false}
+    
+                   closable={true}
                     onClose={this.onClose}
                     visible={this.state.visible}
+                    maskClosable= {true}
                   >
+                    <div style={{height:20}}></div>
+                     <RightMenu drawer = '1'/>
+                     <Divider />
                     <LeftMenu />
-                    <RightMenu />
+                   
                   </Drawer>
                 </div>
               </nav>

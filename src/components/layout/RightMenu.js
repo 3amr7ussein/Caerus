@@ -6,6 +6,7 @@ import { Menu, Button, Dropdown, Icon } from "antd"
 import Login from "../Modal/Login"
 import Register from "../Modal/Register"
 import FirebaseImage from "../FirebaseTmage/index.js"
+import style from './style.module.scss';
 
 // const menu =  <Menu>
 //     <Menu.Item key="0">
@@ -38,45 +39,52 @@ class RightMenu extends Component {
   }
 
   render() {
+    let hello 
+  if(this.props.drawer ==='0' ) {
+    hello= <>Hello,</>
+   }
+    else
+   {
+    hello= <></>
+    }
     // console.log("Home", this.props.user)
+   let show
+   if(this.props.drawer === '0'){
+     show = <Menu.Item key="_01" >
+     <Link to="" className = {style.Link}>List your business</Link>
+   </Menu.Item>
+   }
+    else{
+    show = <></>
+   }
     return (
-      <div>
-        <Menu mode="horizontal">
-          <Menu.Item key="_01">
-            <Link to="">List your business</Link>
-          </Menu.Item>
-          <Menu.Item key="_02">
+      <div >
+        <Menu mode={this.props.mode} >
+          {show}
+                   <Menu.Item key="_02">
             {this.props.user.isAuthenticated ? (
-              <div>
+           <Link to="/myProfile/" className = {style.Link} style = {(this.props.drawer ==0)? {color:'white'} : {color:'#ff4200'}}>
+              <div style = {{cursor:'pointer' , fontWeight : 'bold'}}>
+                
                 <FirebaseImage
                   fbref={this.props.user.user.avatar}
                   style={{
-                    width: 40,
-                    height: 40,
+                    width: 35,
+                    height: 35,
                     marginBottom: 0,
                     borderRadius: "50%",
                     marginRight: 8,
                   }}
                 />
-                <Link to="/myProfile/" style = {{color:'white'}}>
+                
                   {" "}
-                  Hello, {this.props.user.user.name}{" "}
+                  {hello} 
+                  {this.props.user.user.name}{" "}
+                  </div>
                 </Link>
-                {/* <Dropdown
-                  overlay={menu}
-                  trigger={["click"]}
-                  className={"dropDown"}
-                >
-                  <a
-                    className="ant-dropdown-link"
-                    href="#"
-                    style={{ color: "white" }}
-                  >
-                    Hello, {this.props.user.user.name} <Icon type="down" />
-                  </a>
-                </Dropdown> */}
-              </div>
+          
             ) : (
+              
               <Button
                 ghost
                 type="link"
