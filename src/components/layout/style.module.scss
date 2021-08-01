@@ -1,34 +1,34 @@
-
+$colorWhite: #fff;
+$brandGreen: #5ccdb0;
+$brandCoral: #fe6b52;
+$brandGrey: #9b9b9b;
+$brandDarkGrey: #4a4a4a;
+$brandOrange: #ff4200;
+$brandDarkBlue: #0c141f;
+$containerWidth: 940px;
 .nav {
- 
-  
   :global {
     .ant-menu-horizontal > .ant-menu-item:hover a {
       border-bottom: 2px solid #fff;
     }
-    
   }
 
   .menuBar {
-    top : 0px;
+    top: 0px;
     padding: 6px 0px;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
-   
-   
   }
 }
 
 .scrolled {
   .menuBar {
-    
     padding: 6px 0;
     transition: all 0.5s ease-in-out;
     background-color: #ff4200;
 
     // background-color: #ff4200;
     // background-color: black;
-    
   }
 }
 .layout {
@@ -36,7 +36,6 @@
     margin: 0px auto;
     max-width: $containerWidth;
     justify-content: center;
-  
   }
 }
 .layout {
@@ -164,7 +163,7 @@
   float: left;
 }
 .menuCon .rightMenu {
-  float:right;
+  float: right;
 }
 .barsMenu {
   float: right;

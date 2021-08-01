@@ -67,12 +67,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -87,20 +87,23 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: "gatsby-plugin-sass",
-      options: {
-        data: '@import "config/variables.scss";',
-        includePaths: ["src/components"],
-      },
-    },
+
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `config/typography`,
       },
     },
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        sassOptions: {
+          data: '@import "${__dirname}/variables.scss";',
+          includePaths: ["src/components", "config"],
+        },
+      },
+    },
     `gatsby-plugin-no-sourcemaps`,
-    // "gatsby-plugin-babel",
+    "gatsby-plugin-babel",
   ],
 }

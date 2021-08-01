@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import { connect } from "react-redux"
-import { Menu, Button, Dropdown, Icon } from "antd"
+import { Menu, Button } from "antd"
 // import { FirebaseHelper } from "../../../static/Firebase"
 import Login from "../Modal/Login"
 import Register from "../Modal/Register"
 import FirebaseImage from "../FirebaseTmage/index.js"
-import style from './style.module.scss';
+import style from "./style.module.scss"
 
 // const menu =  <Menu>
 //     <Menu.Item key="0">
@@ -39,52 +39,56 @@ class RightMenu extends Component {
   }
 
   render() {
-    let hello 
-  if(this.props.drawer ==='0' ) {
-    hello= <>Hello,</>
-   }
-    else
-   {
-    hello= <></>
+    let hello
+    if (this.props.drawer === "0") {
+      hello = <>Hello, </>
+    } else {
+      hello = <></>
     }
     // console.log("Home", this.props.user)
-   let show
-   if(this.props.drawer === '0'){
-     show = <Menu.Item key="_01" >
-     <Link to="" className = {style.Link}>List your business</Link>
-   </Menu.Item>
-   }
-    else{
-    show = <></>
-   }
+    let show
+    if (this.props.drawer === "0") {
+      show = (
+        <Menu.Item key="_01">
+          <Link to="" className={style.Link}>
+            List your business
+          </Link>
+        </Menu.Item>
+      )
+    } else {
+      show = <></>
+    }
     return (
-      <div >
-        <Menu mode={this.props.mode} >
+      <div>
+        <Menu mode={this.props.mode}>
           {show}
-                   <Menu.Item key="_02">
+          <Menu.Item key="_02">
             {this.props.user.isAuthenticated ? (
-           <Link to="/myProfile/" className = {style.Link} style = {(this.props.drawer ==0)? {color:'white'} : {color:'#ff4200'}}>
-              <div style = {{cursor:'pointer' , fontWeight : 'bold'}}>
-                
-                <FirebaseImage
-                  fbref={this.props.user.user.avatar}
-                  style={{
-                    width: 35,
-                    height: 35,
-                    marginBottom: 0,
-                    borderRadius: "50%",
-                    marginRight: 8,
-                  }}
-                />
-                
-                  {" "}
-                  {hello} 
+              <Link
+                to="/myProfile/"
+                className={style.Link}
+                style={
+                  this.props.drawer === 0
+                    ? { color: "white" }
+                    : { color: "#ff4200" }
+                }
+              >
+                <div style={{ cursor: "pointer", fontWeight: "bold" }}>
+                  <FirebaseImage
+                    fbref={this.props.user.user.avatar}
+                    style={{
+                      width: 35,
+                      height: 35,
+                      marginBottom: 0,
+                      borderRadius: "50%",
+                      marginRight: 8,
+                    }}
+                  />
+                  {hello}
                   {this.props.user.user.name}{" "}
-                  </div>
-                </Link>
-          
+                </div>
+              </Link>
             ) : (
-              
               <Button
                 ghost
                 type="link"
@@ -133,17 +137,14 @@ class RightMenu extends Component {
     )
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     user: state.user,
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {}
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(RightMenu)
+export default connect(mapStateToProps, mapDispatchToProps)(RightMenu)

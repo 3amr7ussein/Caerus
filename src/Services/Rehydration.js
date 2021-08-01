@@ -1,16 +1,16 @@
 import ReduxPersist from "../../config/ReduxPersist"
-import { AsyncStorage } from "@callstack/async-storage"
+import { AsyncStorage } from "@react-native-community/async-storage"
 import { persistStore } from "redux-persist"
 import StartupActions from "../Redux/StartupRedux"
 import DebugConfig from "../../config/DebugConfig"
 
-const updateReducers = store => {
+const updateReducers = (store) => {
   const reducerVersion = ReduxPersist.reducerVersion
   const startup = () => {}
 
   // Check to ensure latest reducer version
   AsyncStorage.getItem("reducerVersion")
-    .then(localVersion => {
+    .then((localVersion) => {
       if (localVersion !== reducerVersion) {
         if (DebugConfig.useReactotron) {
           console.tron.display({

@@ -1,10 +1,10 @@
 import React from "react"
-import { Layout as AntLayout, Menu } from "antd"
+import { Layout as Menu } from "antd"
 import { connect } from "react-redux"
-import Firebase, { getFirebase } from "../../../static/Firebase/index.js"
+import { getFirebase } from "../../../static/Firebase/index.js"
 
 import styled from "styled-components"
-import BrandedButton from "../brandedButton/BrandedButton"
+// import BrandedButton from "../brandedButton/BrandedButton"
 import { FontContainer } from "../../../config/typography"
 import style from "./style.module.scss"
 import SiteFooter from "./footer"
@@ -23,7 +23,7 @@ class Layout extends React.Component {
     const auth = import("firebase/auth")
     const database = import("firebase/database")
 
-    Promise.all([app, auth, database]).then(values => {
+    Promise.all([app, auth, database]).then((values) => {
       const firebase = getFirebase(values[0])
       firebase.auth().signInAnonymously()
     })
@@ -38,22 +38,24 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children } = this.props;
-    
+    const { children } = this.props
+
     return (
       <div
         className={style.layout}
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          
         }}
       >
         <FontContainer />
-        <StyledWrapper className={this.state.isScrolled ? style.scrolled : style.nav}>
-          <Menu  className={style.menuBar} >
-            <div  className = {style.discoverWrapper}   > */}
-            <Navbar />
+        <StyledWrapper
+          className={this.state.isScrolled ? style.scrolled : style.nav}
+        >
+          <Menu className={style.menuBar}>
+            <div className={style.discoverWrapper}>
+              {" "}
+              <Navbar />
             </div>
           </Menu>
         </StyledWrapper>
@@ -64,20 +66,17 @@ class Layout extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     user: state.user,
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {}
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Layout)
+export default connect(mapStateToProps, mapDispatchToProps)(Layout)
 
 const StyledWrapper = styled.section`
   .ant-layout-header {

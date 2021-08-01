@@ -54,7 +54,7 @@ const authLink = setContext((_, { headers }) => {
   }
 })
 
-const updateHeaders = operation => {
+const updateHeaders = (operation) => {
   const token =
     typeof localStorage != undefined ? localStorage.getItem("access_token") : ""
   operation.setContext({

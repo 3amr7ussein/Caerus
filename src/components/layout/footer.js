@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Row, Col } from "antd"
 import Img from "gatsby-image"
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa"
+import { FaFacebookF, FaInstagram } from "react-icons/fa"
 
 import style from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
@@ -27,7 +27,7 @@ export default class Footer extends Component {
     return (
       <StaticQuery
         query={FooterQuery}
-        render={data => (
+        render={(data) => (
           <footer className={style.siteFooter}>
             <section className={style.footerContainer}>
               <Row gutter={4} className={style.row}>

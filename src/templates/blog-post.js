@@ -65,7 +65,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul> */}{" "}
-        */}
+        */
       </Layout>
     )
   }
@@ -73,13 +73,13 @@ class BlogPostTemplate extends React.Component {
 
 export default BlogPostTemplate
 
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query BlogPostBySlug($slug: String!) {
+//     site {
+//       siteMetadata {
+//         title
+//         author
+//       }
+//     }
+//   }
+// `

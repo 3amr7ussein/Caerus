@@ -1,12 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Query } from "react-apollo"
 
 import Layout from "../../components/layout/index"
 import SEO from "../../components/seo/index"
-import { graphQLClient } from "../../Services/Api"
+//import { graphQLClient } from "../../Services/Api"
 import Invoice from "../../components/Invoice"
-import QuerySingleWorkClass from "../../Graphql/QuerySingleWorkClass"
 
 class BlogIndex extends React.Component {
   render() {

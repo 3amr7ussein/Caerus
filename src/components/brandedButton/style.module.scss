@@ -1,3 +1,10 @@
+$colorWhite: #fff;
+$brandGreen: #5ccdb0;
+$brandCoral: #fe6b52;
+$brandGrey: #9b9b9b;
+$brandDarkGrey: #4a4a4a;
+$brandOrange: #ff4200;
+$brandDarkBlue: #0c141f;
 .button {
   background-color: $brandOrange;
   // font-family: open sans condensed;
@@ -25,7 +32,4 @@
   background-color: $brandOrange;
   color: white;
   border-color: $brandOrange;
-
-
-  
 }

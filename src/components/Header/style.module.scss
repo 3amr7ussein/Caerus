@@ -1,3 +1,5 @@
+$containerWidth: 800px;
+
 .dadContainer {
   // background-color: tomato;
   display: flex;
@@ -8,7 +10,6 @@
   background: rgba(255, 255, 255, 0.51);
   box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.15);
 }
-
 
 .boxShadow {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);

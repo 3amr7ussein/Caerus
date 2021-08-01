@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+// import { graphql } from "gatsby"
 import { connect } from "react-redux"
 import moment from "moment"
 
@@ -20,12 +20,14 @@ class BlogIndex extends React.Component {
   }
 
   componentDidMount() {
+    {
+    }
     this.props.refreshHome({ range: [moment().toISOString()] })
     this.props.getCategories()
   }
 
   render() {
-    const { data } = this.props
+    // const { data } = this.props
     // const siteTitle = data.site.siteMetadata.title
 
     return (
@@ -43,20 +45,17 @@ class BlogIndex extends React.Component {
     )
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     home: state.home,
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    refreshHome: args => dispatch(HomeActions.homeRequest(args)),
+    refreshHome: (args) => dispatch(HomeActions.homeRequest(args)),
     getCategories: () => dispatch(CategoriesActions.categoriesRequest()),
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(BlogIndex)
+export default connect(mapStateToProps, mapDispatchToProps)(BlogIndex)

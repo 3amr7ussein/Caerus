@@ -1,55 +1,60 @@
-.container{
+$colorWhite: #fff;
+$brandGreen: #5ccdb0;
+$brandCoral: #fe6b52;
+$brandGrey: #9b9b9b;
+$brandDarkGrey: #4a4a4a;
+$brandOrange: #ff4200;
+$brandDarkBlue: #0c141f;
+$containerWidth: 940px;
+.container {
   background-color: white;
 }
 
-
-.walletContainer{
-
+.walletContainer {
   border: 1px solid green;
-  padding :7px;
+  padding: 7px;
   font-weight: bold;
 }
 
-.radio{
-  background-color:green;
+.radio {
+  background-color: green;
 }
 
-
-.textRight{
+.textRight {
   text-align: right;
 }
 
-.hint{
-  margin-top:5px;
-  margin-bottom:18px;
+.hint {
+  margin-top: 5px;
+  margin-bottom: 18px;
 }
-.buttonDiv{
+.buttonDiv {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-.button{
+.button {
   background-color: $brandOrange;
   color: white;
-padding : 0 50px;
-
+  padding: 0 50px;
 }
 
-.funds i , .creditCard i{
-  display : inline-block;
-  padding:0;
+.funds i,
+.creditCard i {
+  display: inline-block;
+  padding: 0;
   text-align: center;
-  width : 20px;
-  height :20px;
-  color : red;
-  border : 1px solid red;
+  width: 20px;
+  height: 20px;
+  color: red;
+  border: 1px solid red;
   border-radius: 50%;
 }
 div label {
   font-weight: bold;
   color: black;
 }
-.cash{
+.cash {
   padding: 12px 16px;
   border-bottom: 1px solid #d9d9d9;
 }
